@@ -1,0 +1,17 @@
+body {font-family: verdana;}
+h1{
+    color: darkviolet; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-size: 300%;
+}
+h2 {
+    border: 2px solid black;
+    /* Los valores de border se dividen en:
+    2px define el grosor del borde
+    solid define la textura del borde
+    black el color */
+
+    padding-left: 30px;
+
+    margin-left: 20px;
+}

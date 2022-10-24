@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato tablas en HTML</title>
+
+    <style>
+        table.tabla1 {
+            border: 4px solid black;
+            border-collapse: collapse;
+            /* Esta linea hace que las celdas se junten, eliminando los espacios en blanco */
+            
+
+        }
+        .tabla1 th {
+            border: solid black;
+            padding: 5px 10px;
+            background-color: lightgray;
+        }
+        .tabla1 td {
+            border: solid gray;
+        }
+
+
+        table.tabla2 {
+            border: 4px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            width: 250px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tabla2 th {
+            text-align: left;
+            border: 1px solid black;
+            padding: 5px 10px;
+            background-color: gray;
+            padding: 5px;
+            width: 50%;
+        }
+        .tabla2 td {
+            
+            /* border: solid gray; */
+            border:1px solid black;
+            padding: 5px;
+            width: 50%;
+            
+        }
+        .tabla2 .edad {
+            /* creada clase edad para hacerle los correspondientes cambios */
+            text-align: right;
+        }
+        .tabla2 .nombre {
+            /* creada clase nombre para hacerle los correspondientes cambios */
+            background-color: lightgray;
+            border:1px solid black;
+            font-weight: bold;
+            /* font-weight te permite poner el texto en negrita sin necesidad de usar una etiqueta <b>*/
+        }
+        hr {
+            height: 2px;
+            background-color: black;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tablas en HTML</h1>
+
+    <table class="tabla1">
+        <tr>
+            <!-- fila de cabeceros de la tabla -->
+
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Edad
+            </th>
+        </tr>
+        <tr>
+            <!-- tr corresponde a las filas y tr a los datos deltro de la fila -->
+            <td>
+                María
+            </td>
+            <td>
+                Cepeda
+            </td>
+            <td>
+                18
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dafne
+            </td>
+            <td>
+                Ribera
+            </td>
+            <td>
+                21
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rebeca
+            </td>
+            <td>
+                Canónico
+            </td>
+            <td>
+                29
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Idurre
+            </td>
+            <td>
+                García
+            </td>
+            <td>
+                23
+            </td>
+
+        </tr>
+        
+    <hr>
+
+        
+
+    </table>
+<hr>
+    <table class="tabla2">
+        <tr>
+            <th>
+                Person
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Chris
+            </td>
+            <td class="edad">
+                38
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Dennis
+            </td>
+            <td class="edad">
+                45
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Sarah
+            </td>
+            <td class="edad">
+                29
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Karen
+            </td>
+            <td class="edad">
+                47
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

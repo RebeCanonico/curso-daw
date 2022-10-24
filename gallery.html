@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Flexbox</title>
+
+    <style>
+        div {
+            /* border: 1px solid black; */
+        }
+
+        .gallery-container {
+            width: 100%;
+
+            display: flex;
+        }
+
+        .gallery-left {
+            width: 50%;
+            padding: 12.5px 10px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .gallery-left img {
+            width: 100%;
+        }
+
+        .gallery-right {
+            width: 50%;
+
+            display: flex;
+        }
+        .column {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+        }
+
+        .gallery-right img {
+            width: 100%;
+            /* margin-right: 15px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery-container">
+        <div class="gallery-left">
+            <!-- Este es el contenedor de la img grande en la izq -->
+            <img src="https://images.pexels.com/photos/2214035/pexels-photo-2214035.jpeg" alt="">
+        </div>
+
+        <div class="gallery-right">
+            <!-- Este div contiene las 6 imágenes pequeñas -->
+            <div class="column">
+                <img src="https://onlandscape-pullzone-heyqa02xvhohdyshyl51qdqk.netdna-ssl.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=338"
+                    alt="">
+                <img src="https://onlandscape-pullzone-heyqa02xvhohdyshyl51qdqk.netdna-ssl.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=338"
+                    alt="">
+                <img src="https://onlandscape-pullzone-heyqa02xvhohdyshyl51qdqk.netdna-ssl.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=338"
+                    alt="">
+            </div>
+            <div class="column">
+                <img src="https://onlandscape-pullzone-heyqa02xvhohdyshyl51qdqk.netdna-ssl.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=338"
+                    alt="">
+                <img src="https://onlandscape-pullzone-heyqa02xvhohdyshyl51qdqk.netdna-ssl.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=338"
+                    alt="">
+                <img src="https://onlandscape-pullzone-heyqa02xvhohdyshyl51qdqk.netdna-ssl.com/wp-content/uploads/2012/01/IMG_6347-square-vertorama.jpg?iv=338"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

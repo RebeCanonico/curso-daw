@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mí primera página </title>
+
+    <!-- En style es el lenguaje utilizado en CSS. Es el lenguaje destinado a definir el aspecto visual del documento web. -->
+
+    <style>
+        /* Esto es un comentario en CSS al escribir "code" estamos definiendo un estilo para todas las etiquetas code */
+        code {
+            background-color: rgb(55, 55, 55);
+            color: rgb(110, 155, 240);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formateo del texto de HTML</h1>
+
+    <p>
+        Elementos destinados especificamente a formatear el texto:
+    </p>
+
+    <ul>
+        <li><code>b</code> - Texto en negrita</li>
+        <li><code>strong</code> - Texto importante</li>
+        <li><code>i</code> - Texto en cursiva</li>
+        <li><code>em</code> - Texto énfasis</li>
+        <li><code>Mark</code> - Texto marcado</li>
+        <li><code>small</code> - Texto de menor tamaño</li>
+        <li><code>del</code> - Texto tachado</li>
+        <li><code>ins</code> - Texto insertado</li>
+        <li><code>sub</code> - Texto subscrito</li>
+        <li><code>sup</code> - Texto superescrito</li>
+
+    </ul>
+
+
+    <p>
+        Esto es un párrafo. El texto que queramos destacar visualmente
+        <b>lo haremos con negrita</b>
+        El texto importante irá con la etiqueta <strong>strong</strong>.
+
+        <br>
+        Mientras que la <code>b</code> es meramente visual, <code>strong</code>
+        influye en el posicionamiento web de la pagina.
+    </p>
+
+    <p>
+        <mark>Texto marcado</mark> <br>
+        <small>Texto pequeño</small> <br>
+        <del>Texto tachado</del> <br>
+        <ins>Texto subrallado</ins> <br>
+        <sub>Texto inferior</sub>
+        <sup>Texto superior</sup>
+    </p>
+
+    <h2>Elementos de citación</h2>
+
+    <ul>
+        <li><code>Blockquote</code> - Define una sección citada de otra fuente.</li>
+        <li><code>q</code> - Define una cita corta.</li>
+        <li><code>abbr</code> - Define una abreviatura o acrónimo.</li>
+        <li><code>address</code> - Define la información de contacto del autor del articulo.</li>
+        <li><code>cite</code> - Define el título de un trabajo creativo. Como un poema, libro o cancion.</li>
+        <li><code>bdo</code> - Se usa para definir la dirección del texto.</li>
+
+    </ul>
+
+    <h3>Blockquote</h3>
+
+    <p>El tiempo en Bilbao</p>
+
+    <blockquote cite="https://www.elconfidencial.com/el-tiempo/2022-10-18/el-tiempo-en-bilbao-martes_3507919">
+        Este martes Bilbao (Vizcaya) presentará un panorama con pocas nubes desde primera hora del día y será de nubes
+        altas a partir de primera hora de la mañana, según la predicción de la Agencia Estatal de Meteorología (AEMET).
+        No habrá muchos cambios en cuanto a las temperaturas: la máxima oscilará en torno a los 31 grados y la mínima se
+        mantendrá en valores de 18 . <q>En esta fecha vendrán vientos flojos de dirección sudeste</q>. A continuación se
+        indica
+        la evolución semanal del tiempo en Bilbao; concretamente, a la izquierda se muestra el estado del cielo de cada
+        día junto a la probabilidad de precipitaciones, seguido de la temperatura mínima y máxima que registrarán los
+        termómetros.
+    </blockquote>
+
+    <h3>q</h3>
+
+    <p> Por otra parte, mañana se presenta un miércoles con <q>nubes altas hasta mediodía</q>, instante en el que el
+        panorama
+        evolucionará hacia una menor nubosidad .</p>
+
+    <h3>abbr</h3>
+    <p><code>abbr</code>Se usa para definir abreviaturas y acrónimos como HTML, CSS, etc.</p>
+
+    <blockquote>
+        <abbr title="Se espera una temperatura máxima similar a la de hoy en Bilbao">temp</abbr> pero la mínima
+        experimentará algunos cambios
+        (con 17 grados de sensación térmica mínima) . Predominarán vientos flojos del sudoeste.
+    </blockquote>
+
+    <h3>adrress</h3>
+    <p>
+        Es un bloque de texto, que los navegadores normalmente escriben en cursiva.
+        aqui se define la info del contacto con el autor o dueño de la pagina/articulo/documento.
+        Puede ser desde una dirección física hasta una dirección de correo electronico, un telefono, etc.
+    </p>
+
+    <Address>
+        Escrito por juan Castilla. <br>
+        Contacto: 666999666 <br>
+        jucas@gmail.jucas <br>
+        Bilbao, Pais vasco.
+    </Address>
+
+    <h3>cite</h3>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The_Scream_by_Edvard_Munch%2C_1893_-_Nasjonalgalleriet.png/483px-The_Scream_by_Edvard_Munch%2C_1893_-_Nasjonalgalleriet.png?20150815214940"
+        alt="" width="250">
+
+    <p>
+        <cite>El grito</cite>, por Edvard Munch. 1893
+    </p>
+    <h3>BDO</h3>
+
+    <p>
+        <code>bdo</code> Se usa cuando queremos cambiar la dirección del texto.
+    </p>
+
+    <p>
+        <bdo dir="rtl">Este texto esta escrito de derecha a izquierda.</bdo>
+    </p>
+
+    <h2>Estílos</h2>
+
+    <p>
+        Los estílos definen el aspecto visual de los elementos html que acompañan.
+        La sintaxis es la siguiente: <br>
+        <code>&lt;elemento style:="propiedad:valor;"&gt;</code>
+    </p>
+
+    <p>ejemplo</p>
+
+    <p style="background-color: #9D8189; color:#FFCAD4">
+        Este parrafo tiene propiedad de fondo y color asignadas.
+    </p>
+
+    <p>
+        EL lenguaje en el que se determinan los estilos es CSS.
+    </p>
+
+    <p>
+        Una manera más correcta de determiar los estílos es mediante la etiquéta <code>style</code> ubicada dentro de la
+        etiqueta <code>head</code>.
+    </p>
+
+</body>
+
+</html>

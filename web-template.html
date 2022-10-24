@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de una pagina web</title>
+    <!-- el asterisco selecciona todos los elementos de la pagina (dentro del body) -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        section div {
+            border: 1px solid black
+        }
+        header {
+            background-color: rgb(50, 190, 144);
+            color: white;
+            height: 180px;
+            
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        header h1 {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: rgb(75, 75, 75);
+
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            /* si le indicamos dos cifras al padging, tomara el primer valor para el padding vertical y el segundo horizontal. */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(220, 220, 220);
+
+            padding: 5px;
+        }
+        nav a:hover {
+            color: rgb(75, 75, 75);
+            background-color: rgb(220, 200, 220);
+        }
+        /* :hover es un estado especial, que se aplica al pasar el ratón/cursor por encima del elemento */
+
+        section {
+            display: flex;
+        }
+        section div {
+            padding: 10px;
+        }
+        .div-izq {
+            width: 30%;
+        }
+        .div-der {
+            width: 70%;
+        }
+        footer {
+            background-color: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 75px;
+
+            display: flex;
+            justify-content: center;
+            /* text-align: center; */
+            /* padding: 1%; */
+            /* el paddong hace que se centre porque se rellena por todos lados */
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- esto es la cabezera de la web -->
+        <h1>My Website</h1>
+        <p>A website created by me.</p>
+    </header>
+
+    <nav>
+        <!-- esto es el menu de la navegacion -->
+        
+        <div>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        </div>
+        <div>
+            <a href="#">Link</a>
+        </div>
+        
+    </nav>
+
+    <section>
+        <div class="div-izq">
+            <!-- esto es el contenedor de la izquierda -->
+            <h2>About Me</h2>
+            
+            <h5>Photo of me:</h5>
+
+            <img width="100%" height="150px"
+            src="https://www.publicdomainpictures.net/pictures/280000/velka/dusky-grey-sky-background.jpg" alt="">
+
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+
+            <h3>More Text</h3>
+
+            <p>Lorem ipsum dolor sit ame.</p>
+
+            <img width="100%" height="50px"
+            src="https://www.publicdomainpictures.net/pictures/280000/velka/dusky-grey-sky-background.jpg" alt="">
+            <img width="100%" height="50px"
+            src="https://www.publicdomainpictures.net/pictures/280000/velka/dusky-grey-sky-background.jpg" alt="">
+            <img width="100%" height="50px"
+            src="https://www.publicdomainpictures.net/pictures/280000/velka/dusky-grey-sky-background.jpg" alt="">
+
+        </div>
+
+        <div class="div-der">
+            <!-- este es el contenedor de la derecha -->
+            <h2>TITLE HEADING</h2>
+
+            <h5>Title description, Dec 7, 2017</h5>
+
+            <img width="100%" height="150px"
+                src="https://www.publicdomainpictures.net/pictures/280000/velka/dusky-grey-sky-background.jpg" alt="">
+
+            <p>Some text..</p>
+
+            <p>
+                Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.
+            </p>
+            
+            <h2>TITLE HEADING</h2>
+            
+            <h5>Title description, Sep 2, 2017</h5>
+            
+            <img width="100%" height="150px"
+                src="https://www.publicdomainpictures.net/pictures/280000/velka/dusky-grey-sky-background.jpg" alt="">
+
+                <p>Some text..</p>
+
+                <p>
+                    Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco.
+                </p>    
+        </div>
+
+       
+    </section>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+</body>
+
+</html>

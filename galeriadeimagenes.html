@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagenes</title>
+    <style>
+        div {
+            border: 1px solid;
+        }
+
+        .galeria {
+            /* el contededor ocupa el 100% de la pagina */
+            width: 100%;
+
+            display: flex;
+        }
+
+        .izq {
+            /* ocupa el 50% del contenedor */
+            width: 50%;
+
+        }
+
+        .izq img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .der {
+            width: 50%;
+
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .der img {
+            width: 50%;
+            height: 33%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="galeria">
+        <div class="izq">
+            <img
+                src="https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt="">
+        </div>
+        <div class="der">
+
+            <!-- <div> -->
+                <img height="225px" width="225px"
+                    src="https://images.pexels.com/photos/7210754/pexels-photo-7210754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <img height="225px" width="225px"
+                    src="https://images.pexels.com/photos/7210692/pexels-photo-7210692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <img height="225px" width="225px"
+                    src="https://images.pexels.com/photos/2666156/pexels-photo-2666156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            <!-- </div>
+            <div> -->
+                <img height="225px" width="225px"
+                    src="https://images.pexels.com/photos/3705255/pexels-photo-3705255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <img height="225px" width="225px"
+                    src="https://images.pexels.com/photos/5745210/pexels-photo-5745210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+                <img height="225px" width="225px"
+                    src="https://images.pexels.com/photos/3104786/pexels-photo-3104786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+
+</html>

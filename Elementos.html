@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos avanzados HTML</title>
+    <link rel="stylesheet" href="General.CSS">
+
+    <style>
+        div {
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            /* Ejemplo de como centrar el botón */
+            /* ponemos border como comentario para que no se muestre el borde */
+
+        }
+        div a {
+            text-decoration: none;
+
+            background-color: rgb(80, 80, 80);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        h1 {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elementos avanzados de HTML</h1>
+
+    <h2>Links o hipervinculos</h2>
+    <p>
+        Los links se encuentran en todo tipo de paginas que permiten al usuario navegar por la web o por los documentos
+        de la web.
+    </p>
+    <p>
+        Cuando clicas en un link te mueve a otro documento o a una parte concreta del mismo.
+    </p>
+    <p>
+        Cuando se pasa el cursor sobr eun link, éste se torna en una mano.
+    </p>
+    <p>
+        Un link se define mediante un elemento <code>&lt;a&gt;</code>
+    </p>
+    <p>
+        La sintaxis de un link, por norma general, es:
+        <code>
+            &lt;a href="url"&gt;Text del link&lt;/a&gt;
+        </code>
+    </p>
+    <p>
+        El atributo mas importante de un link es el "href" ya que es este el que indica el punto al que nos llevará el
+        link.
+    </p>
+
+    <p>Ejemplos</p>
+
+    <a href="https://coolors.co/"
+    target="_blank">Link a coloors</a> <br>
+    <a href="CSS-basico.html">Link a la teoría de CSS</a>
+
+    <p>
+        Los links tienen 3 estados:
+    <ul>
+        <li>Son azules cuando no han sido viditados.</li>
+        <li>Morados cuando ya han sido clicados.</li>
+        <li>y rojos cuando están activos.</li>
+    </ul>
+    </p>
+
+    <p>
+        Los links se pueden modificar mediante CSS para que tengan un aspecto completamente distinto.
+    </p>
+    <div>
+        <a href="#">Esto es un link</a>
+    </div>
+
+    <h3>Usar una imagen como link</h3>
+
+    <a target="_blank"
+    href="https://www.muyinteresante.es/mascotas/fotos/consejos-para-socializar-a-un-gatito-cachorro">
+        <img width="60%"
+        src="https://estaticos.muyinteresante.es/uploads/images/gallery/59a669fc5bafe88febb3d6cc/gatito-cesped_0.jpg" alt="">
+    </a>
+    
+    <a target="_blank"
+    href="https://www.skoda.es/?c=87619316&utm_source=google&utm_medium=cpc&utm_campaign=ES_NON_DSY_MD_DL_ALWAYSON&utm_term=cpc&FORM_MKT_CHANNEL=DIGITAL_AO&FORM_WEB_SECTION=SEM&gclid=EAIaIQobChMIs-6o3OLr-gIVhpBoCR0d-Q2rEAAYASAAEgKzwvD_BwE&gclsrc=aw.ds">
+        <img width="60%"
+        src="https://noticias.coches.com/wp-content/uploads/2020/12/coche-colores-Skoda-Fabia.jpg" alt="">
+    </a>
+
+    <a target="_blank"
+    href="https://www.honda.es/">
+        <img width="60%"
+        src="https://images.pexels.com/photos/12442079/pexels-photo-12442079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+    </a>
+
+
+</body>
+
+</html>
