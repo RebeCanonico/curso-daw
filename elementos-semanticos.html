@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elelentos semanticos</title>
+
+    <style>
+        .container {
+            border: 1px solid black;
+            text-align: center;
+            width: 100%;
+
+
+        }
+
+        .alingiz {
+
+            /* justify-content: space-between; */
+            /* padding: 5px 0; */
+            width: 50%;
+
+        }
+
+        .alingdr {
+
+            width: 50%;
+
+            flex-wrap: wrap;
+            justify-content: end;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elelemtos semanticos de HTML</h1>
+
+    <div class="container">
+
+        <header class="container">
+            <h1>Título</h1>
+        </header>
+        
+        <nav class="container">
+            <h1>Menú de navegación</h1>
+        </nav>
+
+        <div class="container alingiz">
+            <section>
+                <h1>section</h1>
+            </section>
+
+            <article>
+                <h1>article</h1>
+            </article>
+
+        </div>
+        <div class="container alingdr">
+            <aside>
+                <h1>aside</h1>
+            </aside>
+        </div>
+    </div>
+
+
+
+
+    <footer class="container">footer</footer>
+
+    </div>
+</body>
+
+</html>
