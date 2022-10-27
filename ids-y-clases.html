@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id's y Clases</title>
+
+    <style>
+        /* En CSS las clases se indican con un punto */
+        .txt {
+            font-size: 120%;
+            color: red;
+        }
+
+        .cursiva {
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /* En CSS las id se indican con una almoadila # */
+
+        #myHeader {
+            background-color: rgb(94, 74, 206); 
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            border-radius: 50%;
+            font-family: monospace;
+        }
+        #btnTop {
+            /* esto le da una posicion jifa en la pantalla */
+            position: fixed;
+            right: 5%;
+            bottom: 10%;
+
+            text-decoration: none;
+            color: white;
+            background-color: rgb(37, 179, 179);
+            border-radius: 15%;
+            padding: 3.5px;
+        }
+    </style>
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <h1>Id's y Clases</h1>
+
+    <p>
+        Las id y las clases son atributos que se pueden asignar a los elementos de HTML. Mientras que las clases se pueden asignar a varios elementos, las id son únicas y sólo puede tenerlas un elemento.
+    </p>
+
+    <h2>Clases</h2>
+
+    <p>
+        La principal función de las clases es apuntar a varios elementos mediante CSS o la manipulación mediante JavaScript a múltiples elementos.
+    </p>
+
+    <h3>Ejemplo:</h3>
+
+    <h2>Este <span class="txt">texto</span> es importante</h2>
+    <p>Este <span class="txt">texto</span> es importante</p>
+
+    <p>
+        Los elementos también pueden tener múltiples clases. Sólo deben estar separadas por un espacio cuando se les asigna el atributo.
+    </p>
+
+    <p>Este <span class="txt cursiva">texto</span> es importante y está en cursiva.</p>
+
+    <h2>id's</h2>
+    <p>
+        Los Id's apuntan a un único elemento. No puede haber mas de un elemento en la misma id. 
+    </p>
+
+    <p>Sintaxis: En CSS se declara con una almoadilla #. No puede empezar por un numero y no puede contener espacios en blanco.</p>
+
+    <h1 id="myHeader"> Mi titulo personalizado</h1>
+    <h1 id="myHeader"> Mi titulo personalizado</h1>
+
+
+    <h1>Uso combinado de id's y links</h1>
+    <p>
+        Se puede apuntar a los id's 
+    </p>
+    <pre>
+
+        ... 
+
+
+
+
+        ..... 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ,,   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ,...   
+
+
+
+    </pre>
+    <a href="#myHeader">Ir al titulo personalizado</a>
+    <a href="#">Volver al inicio</a>
+
+    <p>
+        Tambien se puede apuntar a los id's de otros documentos.
+    </p>
+    <a href="Listas.html#coffee">Ir a descripcion del cafe</a>
+
+    
+    
+    <!-- Iconos de Bootstrap -->
+
+    <a title="volver arriba" id="btnTop" href="#"><i class="bi bi-arrow-up-short"></i></a>
+     
+    
+    
+
+    
+</body>
+</html>
