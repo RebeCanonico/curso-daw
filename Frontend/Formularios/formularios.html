@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="General.CSS">
+    <link rel="stylesheet" href="./CSS/form-styles.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Formularios HTML</h1>
+    <h2>Formulario sencillo</h2>
+
+    <form action="#" class="simple-form">
+        <h2>HTML form</h2>
+        <div>
+            <!-- required para que el campo sea obligatorio -->
+            <label for="FirstName">First name:</label>
+            <input type="text" name="FerstName" id="" required>
+        </div>
+        <div>
+
+            <label for="LastName">Last name:</label>
+            <input type="text" name="LastName" id="">
+        </div>
+        <div>
+
+            <label for="Dateofbrith">Date of brith:</label>
+            <input type="date" name="Dateofbrith" id="">
+        </div>
+
+        <div>
+
+            <!-- Se pone el  mismo nombre a todas para poder marcar solo una (name:gender)  -->
+            <label for="">Gender:</label>
+            <div>
+                <input type="radio" name="Gender" id="">Male
+                <input type="radio" name="Gender" id="">Female
+                <input type="radio" name="Gender" id="">Other
+            </div>
+        </div>
+        <div>
+
+            <!-- type="checkbox" para poder marcar mas de un campo -->
+            <label for="vehicles">Owned vehicles:</label>
+            <div>
+                <input type="checkbox" name="vehicles" id="">Car
+                <input type="checkbox" name="vehicles" id="">Motorbike
+                <input type="checkbox" name="vehicles" id="">Bycicle
+            </div>
+        </div>
+
+        <div>
+
+            <label for="EmailId">Email id:</label>
+            <input type="text" name="EmailId" id="">
+        </div>
+        <div>
+
+            <!-- type="number" porque el campo es de numeros de telefono -->
+            <label for="mobilenumber">Mobile Number:</label>
+            <input type="number" name="MobileNumber" id="">
+        </div>
+        <div>
+
+            <input type="submit" value="Submit">
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <h2>Formulario de contacto</h2>
+
+    <form class="contact" action="">
+        <div>
+            <input type="text" placeholder="Enter your name">
+            <br>
+            <input type="text" placeholder="enter a valid email address">
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <!-- value= le da nombre al boton -->
+        <input type="submit" name="" id="" value="Submit">
+
+    </form>
+
+
+
+</body>
+
+</html>
