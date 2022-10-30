@@ -41,8 +41,9 @@ form.simple-form div button {
 }
 form.contact {
     background-color: #a9be1e;
+    display: flex;
 }
-form.contact div {
+form.contact div.contenedor {
     width: 50%;
 }
 
@@ -66,4 +67,15 @@ form.contact input[type='submit']:hover {
     /* El cursor cambia una mano, indicando si  */
     cursor: pointer;
 
+}
+div.contact-der {
+    padding: 15px;
+}
+div.icons{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+img.icons-img{
+    width: 45px;
 }

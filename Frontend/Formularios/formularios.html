@@ -14,87 +14,115 @@
 </head>
 
 <body>
-    <h1>Formularios HTML</h1>
-    <h2>Formulario sencillo</h2>
-
-    <form action="#" class="simple-form">
-        <h2>HTML form</h2>
-        <div>
-            <!-- required para que el campo sea obligatorio -->
-            <label for="FirstName">First name:</label>
-            <input type="text" name="FerstName" id="" required>
-        </div>
-        <div>
-
-            <label for="LastName">Last name:</label>
-            <input type="text" name="LastName" id="">
-        </div>
-        <div>
-
-            <label for="Dateofbrith">Date of brith:</label>
-            <input type="date" name="Dateofbrith" id="">
-        </div>
-
-        <div>
-
-            <!-- Se pone el  mismo nombre a todas para poder marcar solo una (name:gender)  -->
-            <label for="">Gender:</label>
+    <div>
+        <h1>Formularios HTML</h1>
+        <h2>Formulario sencillo</h2>
+    
+    </div>
+    <div>
+        <form action="#" class="simple-form">
+            <h2>HTML form</h2>
             <div>
-                <input type="radio" name="Gender" id="">Male
-                <input type="radio" name="Gender" id="">Female
-                <input type="radio" name="Gender" id="">Other
+                <!-- required para que el campo sea obligatorio -->
+                <label for="FirstName">First name:</label>
+                <input type="text" name="FerstName" id="" required>
             </div>
-        </div>
-        <div>
-
-            <!-- type="checkbox" para poder marcar mas de un campo -->
-            <label for="vehicles">Owned vehicles:</label>
             <div>
-                <input type="checkbox" name="vehicles" id="">Car
-                <input type="checkbox" name="vehicles" id="">Motorbike
-                <input type="checkbox" name="vehicles" id="">Bycicle
+    
+                <label for="LastName">Last name:</label>
+                <input type="text" name="LastName" id="">
             </div>
-        </div>
+            <div>
+    
+                <label for="Dateofbrith">Date of brith:</label>
+                <input type="date" name="Dateofbrith" id="">
+            </div>
+    
+            <div>
+    
+                <!-- Se pone el  mismo nombre a todas para poder marcar solo una (name:gender)  -->
+                <label for="">Gender:</label>
+                <div>
+                    <input type="radio" name="Gender" id="">Male
+                    <input type="radio" name="Gender" id="">Female
+                    <input type="radio" name="Gender" id="">Other
+                </div>
+            </div>
+            <div>
+    
+                <!-- type="checkbox" para poder marcar mas de un campo -->
+                <label for="vehicles">Owned vehicles:</label>
+                <div>
+                    <input type="checkbox" name="vehicles" id="">Car
+                    <input type="checkbox" name="vehicles" id="">Motorbike
+                    <input type="checkbox" name="vehicles" id="">Bycicle
+                </div>
+            </div>
+    
+            <div>
+    
+                <label for="EmailId">Email id:</label>
+                <input type="text" name="EmailId" id="">
+            </div>
+            <div>
+    
+                <!-- type="number" porque el campo es de numeros de telefono -->
+                <label for="mobilenumber">Mobile Number:</label>
+                <input type="number" name="MobileNumber" id="">
+            </div>
+            <div>
+    
+                <input type="submit" value="Submit">
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    
+    </div>    
+    
+    <div>
+        <h2>Formulario de contacto</h2>
+    </div>
 
-        <div>
-
-            <label for="EmailId">Email id:</label>
-            <input type="text" name="EmailId" id="">
-        </div>
-        <div>
-
-            <!-- type="number" porque el campo es de numeros de telefono -->
-            <label for="mobilenumber">Mobile Number:</label>
-            <input type="number" name="MobileNumber" id="">
-        </div>
-        <div>
-
-            <input type="submit" value="Submit">
-            <button type="reset">Reset</button>
-        </div>
-    </form>
-
-    <h2>Formulario de contacto</h2>
-
-    <form class="contact" action="">
-        <div>
-            <input type="text" placeholder="Enter your name">
-            <br>
-            <input type="text" placeholder="enter a valid email address">
-            <br>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-        </div>
-        <!-- value= le da nombre al boton -->
-        <input type="submit" name="" id="" value="Submit">
-        <div>
-            <h1>CONTACT US</h1>
-
-            <H6>1 (234) 567-891 1 (234) 987-654</H6>
+    <div class="form-contact">
+        <form class="contact" action="">
+            <div class="contenedor">
+                <input type="text" placeholder="Enter your name">
+                <br>
+                <input type="text" placeholder="enter a valid email address">
+                <br>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <!-- value= le da nombre al boton -->
+                <input type="submit" name="" id="" value="Submit">
+            </div>
             
+            <div class="contact-der contenedor">
+                <div>
+                    <h1>CONTACT US</h1>
+                </div>
+                <div class="icons">
+                    <a href="">
+                        <img class="icons-img" src="./imagenes/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="">
+                        <img class="icons-img" src="./imagenes/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="">
+                        <img class="icons-img" src="./imagenes/vimeo.png" alt="Vimeo">
+                    </a>
+                    <a href="">
+                        <img class="icons-img" src="./imagenes/instagram.png" alt="instagram">
+                    </a>
+                </div>
+                
+    
+                <div>
+                    <H6>1 (234) 567-891 1 (234) 987-654</H6>
+                </div>
+            </div>
             
-        </div>
-
-    </form>
+    
+        </form>
+    </div>
 
 
 
