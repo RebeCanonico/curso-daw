@@ -11,27 +11,23 @@
         .container {
             border: 1px solid black;
             text-align: center;
-            width: 100%;
-
-
         }
-
-        .alingiz {
-
-            /* justify-content: space-between; */
-            /* padding: 5px 0; */
-            width: 50%;
-
+        .flex-container {
+            display: flex;
+            justify-content: center;
         }
-
-        .alingdr {
-
-            width: 50%;
-
-            flex-wrap: wrap;
-            justify-content: end;
-
+        .left-container {
+            width: 60%;
         }
+        .right-container {
+            width: 40%;
+            height: 100%;
+        }
+        .right-container aside {
+            height: 100%;
+            padding: 40px 0;
+        }
+    
     </style>
 </head>
 
@@ -40,7 +36,7 @@
 
     <div class="container">
 
-        <header class="container">
+        <header class="container" >
             <h1>Título</h1>
         </header>
         
@@ -48,20 +44,21 @@
             <h1>Menú de navegación</h1>
         </nav>
 
-        <div class="container alingiz">
-            <section>
-                <h1>section</h1>
-            </section>
-
-            <article>
-                <h1>article</h1>
-            </article>
-
-        </div>
-        <div class="container alingdr">
-            <aside>
-                <h1>aside</h1>
-            </aside>
+        <div class="flex-container">
+            <div class="left-container">
+                <section class="container">
+                    <h1>Sección</h1>
+                </section>
+    
+                <article class="container">
+                    <h1>Articulo</h1>
+                </article>
+            </div>
+            <div class="right-container">
+                <aside class="container">
+                    <h1>Lateral</h1>
+                </aside>
+            </div>
         </div>
     </div>
 
