@@ -15,7 +15,7 @@ form.simple-form>div {
     display: flex;
     justify-content: space-between;
 
-    width: 350px;
+    width: 400px;
     margin-bottom: 5px;
 
 }
@@ -45,6 +45,7 @@ form.contact {
 }
 form.contact div.contenedor {
     width: 50%;
+    padding: 10px 20px;
 }
 
 form.contact input[type='text'],
@@ -78,4 +79,12 @@ div.icons{
 }
 img.icons-img{
     width: 45px;
+}
+form.renting {
+    background-color: #FFB7B7;
+    padding: 10px 20px;
+}
+form.login {
+    background-color: aquamarine;
+    padding: 20px 20px;
 }

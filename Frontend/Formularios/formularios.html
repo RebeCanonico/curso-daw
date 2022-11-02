@@ -17,7 +17,7 @@
     <div>
         <h1>Formularios HTML</h1>
         <h2>Formulario sencillo</h2>
-    
+
     </div>
     <div>
         <form action="#" class="simple-form">
@@ -28,63 +28,65 @@
                 <input type="text" name="FerstName" id="" required>
             </div>
             <div>
-    
+
                 <label for="LastName">Last name:</label>
                 <input type="text" name="LastName" id="">
             </div>
             <div>
-    
+
                 <label for="Dateofbrith">Date of brith:</label>
                 <input type="date" name="Dateofbrith" id="">
             </div>
-    
+
             <div>
-    
+
                 <!-- Se pone el  mismo nombre a todas para poder marcar solo una (name:gender)  -->
                 <label for="">Gender:</label>
                 <div>
-                    <input type="radio" name="Gender" id="">Male
-                    <input type="radio" name="Gender" id="">Female
-                    <input type="radio" name="Gender" id="">Other
+                    <input type="radio" name="Gender" value="male">Male
+                    <input type="radio" name="Gender" value="female">Female
+                    <input type="radio" name="Gender" value="other">Other
                 </div>
             </div>
             <div>
-    
+
                 <!-- type="checkbox" para poder marcar mas de un campo -->
                 <label for="vehicles">Owned vehicles:</label>
                 <div>
-                    <input type="checkbox" name="vehicles" id="">Car
-                    <input type="checkbox" name="vehicles" id="">Motorbike
-                    <input type="checkbox" name="vehicles" id="">Bycicle
+                    <input type="checkbox" name="vehicles" value="car">Car
+                    <input type="checkbox" name="vehicles" value="motorbike">Motorbike
+                    <input type="checkbox" name="vehicles" value="bycicle">Bycicle
                 </div>
             </div>
-    
+
             <div>
-    
+
                 <label for="EmailId">Email id:</label>
                 <input type="text" name="EmailId" id="">
             </div>
             <div>
-    
+
                 <!-- type="number" porque el campo es de numeros de telefono -->
                 <label for="mobilenumber">Mobile Number:</label>
                 <input type="number" name="MobileNumber" id="">
             </div>
             <div>
-    
+
                 <input type="submit" value="Submit">
                 <button type="reset">Reset</button>
             </div>
         </form>
-    
-    </div>    
-    
+
+    </div>
+
     <div>
         <h2>Formulario de contacto</h2>
     </div>
 
     <div class="form-contact">
+
         <form class="contact" action="">
+
             <div class="contenedor">
                 <input type="text" placeholder="Enter your name">
                 <br>
@@ -94,7 +96,7 @@
                 <!-- value= le da nombre al boton -->
                 <input type="submit" name="" id="" value="Submit">
             </div>
-            
+
             <div class="contact-der contenedor">
                 <div>
                     <h1>CONTACT US</h1>
@@ -113,15 +115,53 @@
                         <img class="icons-img" src="./imagenes/instagram.png" alt="instagram">
                     </a>
                 </div>
-                
-    
+
+
                 <div>
                     <H6>1 (234) 567-891 1 (234) 987-654</H6>
                 </div>
             </div>
-            
-    
+
         </form>
+
+        <div>
+            <h2>Formulario de alquiler de vehículos</h2>
+            <form class="renting" action="">
+                <label for="tipos">Por favor, seleccione un tipo de vehículo</label>
+                <!-- EL selector nos da a elegir entre un conjusto de opciones preestablecidos -->
+                <select name="tipos" id="">
+                    <option value="">Coche</option>
+                    <option value="">Moto</option>
+                    <option value="">Furgoneta</option>
+                </select>
+                <br>
+                <label for="marcas">Selecciones marca del vehiculo</label>
+                <input name="marcas"list="marcas">
+                <!-- datalist + input nos genera un cuadro de inserción de datos con una lista de sugerencias -->
+                <datalist id="marcas">
+                    <option value="Fiat"></option>
+                    <option value="Audi"></option>
+                    <option value="Renault"></option>
+                    <option value="Citröen"></option>
+                </datalist>
+
+                <br>
+                <input type="submit">
+
+            </form>
+        </div>
+        <div>
+            <h2>Formulario de inicio de sesión o logín</h2>
+
+            <form action=""class="login">
+                <input name="user" type="text" placeholder="Ingrese usuario">
+                <br>
+                <input name="password" type="password" placeholder="Inserte contraseña">
+                <br>
+                <input  type="submit">
+            </form>
+        </div>
+    
     </div>
 
 
