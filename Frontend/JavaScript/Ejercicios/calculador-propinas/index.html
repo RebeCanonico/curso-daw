@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de propinas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de propinas</h1>
+
+        <div>
+            <p>
+                Gasto total de la cuenta:
+            </p>
+            <input name="inputCuenta" id="cuentaTotal" type="number"> €
+        </div>
+        <div>
+            <p>Calidad del servicio:</p>
+            <select name="calidadServ" id="calidadServ">
+                <option disable selected>-- Elige una opción --</option>
+                <option value="0.05">★</option>
+                <option value="0.1">★★</option>
+                <option value="0.15">★★★</option>
+                <option value="0.2">★★★★</option>
+                <option value="0.3">★★★★★</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Número de comensales:</p>
+            <input id="numPersonas" type="number">personas.
+        </div>
+
+        <div>
+            <button onclick="calcular()">Calcular!</button>
+        </div>
+
+        <div>
+            <p id="pResultado"></p>
+        </div>
+        <!-- <button onclick="test()">Probar</button> -->
+       </div> 
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
