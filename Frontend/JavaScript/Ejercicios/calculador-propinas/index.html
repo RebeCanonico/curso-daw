@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Calculadora de propinas</h1>
@@ -16,7 +18,7 @@
             <p>
                 Gasto total de la cuenta:
             </p>
-            <input name="inputCuenta" id="cuentaTotal" type="number"> €
+            <input name="inputCuenta" id="cuentaTotal" type="number" min="0" oninput="validity.valid||(value='')"> €
         </div>
         <div>
             <p>Calidad del servicio:</p>
@@ -32,22 +34,23 @@
 
         <div>
             <p>Número de comensales:</p>
-            <input id="numPersonas" type="number">personas.
+            <input id="numPersonas" type="number" min="1">personas.
         </div>
 
         <div>
             <button onclick="calcular()">Calcular!</button>
         </div>
 
-        <div>
-            <p id="pResultado"></p>
+        <div id="divResultado">
+            <p id="pResultado">Resultado</p>
         </div>
         <!-- <button onclick="test()">Probar</button> -->
-       </div> 
+    </div>
 
 
 
 
 </body>
 <script src="script.js"></script>
+
 </html>

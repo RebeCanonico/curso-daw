@@ -18,6 +18,6 @@ function calcular() {
     var resultadoObtenido = (cuenta * calidad) / comensales;
     // asigno el resultado obtenido al contenido que va tener el parrafo y cambio la propiedad display para que se muestre
     pResultado.innerHTML = "Propina por persona: " + resultadoObtenido + " €";
-    pResultado.style.display = "block";
+    pResultado.style.visibility = "visible";
 }
 
