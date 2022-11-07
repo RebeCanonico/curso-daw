@@ -19,6 +19,7 @@ function clock() {
 
 
     let reloj = document.getElementById('pantallaReloj');
+  
 
 
     // damos formato a los numeros
@@ -52,3 +53,45 @@ function clock() {
 
 // inicializar la función 
 clock();
+
+function getFecha() {
+    let fecha = new Date();
+    let diaSemana = fecha.getDay();
+    let mes = fecha.getMonth();
+    let diaMes = fecha.getDate();
+    let year = fecha.getFullYear();
+
+    let texto = '';
+
+    const dias = [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sabado"
+    ]
+    const meses = [
+        'enero',
+        'febrero',
+        'marzo',
+        'abril',
+        'mayo',
+        'junio',
+        'julio',
+        'agosto',
+        'septiembre',
+        'octubre',
+        'noviembre',
+        'diciembre'
+    ]
+
+texto = dias[diaSemana] + ', ' + diaMes + ' de '
+ + meses[mes] + ' de ' + year;
+
+    let calendario = document.getElementById('pantallaFecha');
+    calendario.innerHTML = texto;
+   
+}
+getFecha();
