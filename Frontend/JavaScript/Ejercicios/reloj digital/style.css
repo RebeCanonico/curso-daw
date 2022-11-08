@@ -1,19 +1,33 @@
 body {
     background: black;
     color: aqua;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Regular', sans-serif;
+    
+    
+    /* para que al encojer la pagina en el navegador se quede centrado */
+    text-align: center;                                          
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+/* para que no se pueda seleccionar el reloj desde el navegador */
+    user-select: none;
+
+
     height: 100vh;
 }
 
-/* h1 {
-    font-size: 40px;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-} */
+h1 {
+    font-size: 100px;
+    letter-spacing: 4px;
+
+    /* para dejarlo mas junto */
+    margin-bottom: 0;
+}
+h3 {
+    font-size: 30px;
+    letter-spacing: 1px;
+}

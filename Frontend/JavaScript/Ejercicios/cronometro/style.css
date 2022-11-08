@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(180deg, #FFB7B7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #FFD1D1 0%, #260000 100%), linear-gradient(127.43deg, #00FFFF 0%, #FFFFFF 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(64.82deg, #DBFF00 0%, #3300FF 100%);
+background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
+    height: 100vh;
+    margin: 0;
+    
+    font-family: 'Regular', sans-serif;
+    
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    user-select: none;
+
+}
+
+h1 {
+    /* letter-spacing: 5px; */
+    font-size: 80px;
+    /* min-width: 300px; */
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+h1 div.numeros {
+    padding: 5px 20px;
+    min-width: 60px;
+}
+
+div button {
+    background-color: rgb(116, 204, 204);
+    border: none;
+    font-size: 40px;
+    padding: 7px 14px;
+    margin: auto 20px;
+    font-family: 'Regular', sans-serif;
+    
+}
+
+div button:hover {
+    box-shadow: 5px 5px 5px rgb(72, 126, 126);
+}

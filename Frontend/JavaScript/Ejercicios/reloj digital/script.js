@@ -51,8 +51,6 @@ function clock() {
 
 }
 
-// inicializar la función 
-clock();
 
 function getFecha() {
     let fecha = new Date();
@@ -94,4 +92,7 @@ texto = dias[diaSemana] + ', ' + diaMes + ' de '
     calendario.innerHTML = texto;
    
 }
+
+// inicializar la función 
+clock();
 getFecha();
