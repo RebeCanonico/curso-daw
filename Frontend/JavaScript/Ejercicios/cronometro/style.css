@@ -17,19 +17,21 @@ background-blend-mode: screen, overlay, color-burn, color-dodge, normal;
 }
 
 h1 {
-    /* letter-spacing: 5px; */
+   
     font-size: 80px;
-    /* min-width: 300px; */
     
     display: flex;
     justify-content: center;
-
+    /* con esto no tiembla */
+    width: 1px;
 }
 
 h1 div.numeros {
     padding: 5px 20px;
     min-width: 60px;
 }
+
+
 
 div button {
     background-color: rgb(116, 204, 204);
