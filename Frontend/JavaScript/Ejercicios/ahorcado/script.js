@@ -36,7 +36,7 @@ let palabra = palabras[random];
 let longitud = palabra.length;
 
 
-// declaro una variable para imprimir los guiones
+// declaro una variable para imprimir los guiones, si no sale undefined
 let texto = "";
 for (let indice = 0; indice < longitud; indice++) {
 
@@ -62,7 +62,7 @@ displayPalabra.innerHTML = texto;
 // los hijos son todos los botones que contiene el div.----ESTO ES PARA NO TENER QUE PONER UNA CLASE A CADA LETRA
 const botones = document.getElementById('tablero').childNodes;
 
-// vamos a añadir un Event Listener a cada boton
+// vamos a añadir un Event Listener a cada botón
 // even Listener es asignarle un tipo de evento al elemento HTML que ejecutara un bloque de codigo cuando el evento se cumpla
 // por ejemplo, al hacer click en un boton o cuando pasemos el boton o cuando pasemos el cursor por encima (hover)
 
