@@ -46,6 +46,8 @@ for (let i = 0; i < botones.length; i++) {
 
 let aciertos = [];
 
+
+
 // let ejemplo = [
 //     "_",    //p
 //     "_",    //e
@@ -57,9 +59,14 @@ let aciertos = [];
 
 
 function juego() {
+    // para que aparezca en la consola
     console.log("Has pulsado un botón");
+
     let letra = this.innerHTML;
+    // transformar la letra a minusculas
     letra = letra.toLowerCase();
+
+   
 
     
 
@@ -70,20 +77,20 @@ function juego() {
             console-log("¡Hay una coincidencia!");
             aciertos[i] = letra;
 
-            aciertos++;
+           
         }else if (!aciertos[i]) {
             aciertos[i] = "_";
         }
         console.log(texto);
-       
-        
-    }
+        console.log(aciertos);
 
-    texto = aciertos.join("")
+       
     displayPalabra.innerHTML = texto;
 
     console.log(letra);
+    
+    ganar();
 
 
 }
-
+}

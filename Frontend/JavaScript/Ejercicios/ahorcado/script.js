@@ -126,7 +126,7 @@ function juego() {
             exitos++;
         } else if (!aciertos[i]) {
             //si entra en el else, es que no han habido coincidencias
-            // la condicion if() solo se cumple cuando la posicion i no tiene 
+            // la condicion if() solo se cumple cuando la posicion i del array no tiene ningun valor 
             aciertos[i] = "_";
         }
         console.log(texto);

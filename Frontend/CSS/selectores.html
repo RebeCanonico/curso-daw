@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de CSS</title>
+
+    <link rel="stylesheet" href="../General.CSS">
+    <style>
+        /* selector sencillo por nombre */
+        h1 {
+            font-size: 40px;
+        }
+        span {
+            color: #b228b2;
+        }
+        
+        #pVerde {
+            color: greenyellow;
+            text-align: center;
+        }
+        /* selector de clases */
+        .pSombras {
+            box-shadow: 5px 5px 3px -2px;
+            /* pos h, pos v, blur, extensión */
+        }
+        .pNegrita {
+            font-weight: bold;
+        }
+        /* este selector afecta a los div con la clase especificada */
+        div.pSombras {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* selector universal */
+        /* seleciona todo */
+        * {
+            color: blue;
+        }
+        /* seleciona todo lo que esta dentro de lo que especifiques, en este caso la lista */
+        ul * {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectores de CSS</h1>
+    
+    <p>
+        Los selectores tienen la función de encontrar o selecionar elementos HTML a los
+        que queremos dar estilo.
+    </p>
+
+    <ul>
+        <li>Selectores simples o sencillos - Apuntan a elementos basándose en
+            su clase <code>(.)</code>, id <code>(#)</code> o nombre <code>h1</code>.</li>
+        <li>Combinadores - Selectores basados en una especifica relacion entre los 
+            elementos <code>.contenedor div</code>.</li>
+        <li>Pseudo-clases - Son selectores basados en el estado del elemento. <code>button:hover</code></li>
+        <li>Pseudo-elementos - Selecciona una parte especifica de un elemento.</li>
+        <li>De atributo - Seleciona elementos basandose en un atributo o en el valor de un
+            atributo.</li>
+    </ul>
+
+    <h2>Selectores de nombre de elemento</h2>
+
+    <p>
+        Selecciona los elementos basandose en su nombre de elemento.
+    </p>
+    <p>
+        Ejemplo: Todos los <span>span serán de color morado.</span>
+    </p>
+    <p>
+        <code>
+            <pre>
+                span {
+                    color: purple;
+                }
+            </pre>
+        </code>
+    </p>
+
+    <h2>Selectores de id</h2>
+
+    <p>
+        Este selector usa el atributo id de un elemento HTML para seleccionar <span>un elemento especifico</span>.
+    </p>
+
+    <p>
+        La id de un elemento es unica en el documento. por lo tanto, el selector de id <code>#</code> se usa
+        para especificar un unico elemento.
+    </p>
+
+    <p id="pVerde">
+        Ejemplo: Este parrafo será el unico en estar centrado y de color verde limón.
+    </p>
+
+    <h2>Selectores de clase</h2>
+    <p>
+        El selector de clase <code>.</code> Selecciona aquellos elementos con un atributo de clase específico.
+    </p>
+
+    <p class="pSombras">
+        Ejemplo: Estos tres párrafos comparten clase y tienen una sombra.
+    </p>
+    <p class="pSombras pNegrita">
+        Ejemplo: Estos tres párrafos comparten clase y tienen una sombra y Este
+        está en negrita.
+    </p>
+    <p class="pSombras">
+        Ejemplo: Estos tres párrafos comparten clase y tienen una sombra.
+    </p>
+
+    <div class="pSombras">
+        Los selectores pueden especificar elementos dentro de una clase. 
+    </div>
+
+    <h2>El selector universal</h2>
+    <p>
+        El selector universal <code>*</code> selecciona a <span>todos los elementos</span>.
+    </p>
+
+    <h2>Selector de agrupación</h2>
+    <p>
+        Sirve para agrupar aquellos selectores que tienen las mismas caracteriscicas.
+    </p>
+
+    <p>Ejemplo: Digamos que queremos darle la misma sombra que <code>pSombras</code> a todos los h1 y h2. En vez de ir a todos los elementos h1 y h2 y darles esta clase podemos hacer lo siguiente:
+    </p>
+    <pre>
+        <code>
+            .pSombras {
+                box.shadow: 5px 5px 3px -2px;
+            }
+            h1 {
+                box.shadow: 5px 5px 3px -2px;
+            }
+            h2 {
+                box.shadow: 5px 5px 3px -2px;
+            }
+        </code>
+    </pre>
+    <p>Agrupado quedaria así:</p>
+    <pre>
+        <code>
+            .pSombras, h1, h2 {
+                box.shadow: 5px 5px 3px -2px;
+            }
+        </code>
+    </pre>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
