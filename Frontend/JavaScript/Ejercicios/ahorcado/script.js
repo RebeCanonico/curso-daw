@@ -17,7 +17,7 @@ const pollo = [
     "o"
 ]
 
-// imprimir la palabra en pantalla
+
 // guardo el contenedor donde la vamos a mostrar
 let displayPalabra = document.getElementById('palabra');
 
@@ -43,7 +43,7 @@ for (let indice = 0; indice < longitud; indice++) {
     //guardo un guion por cada 
     texto += "_";
 }
-
+// imprimir la palabra en pantalla
 // = texto; con esto elegimos de que manera se muestra. en texto, con guiones. ocultando la palabra del juego
 displayPalabra.innerHTML = texto;
 

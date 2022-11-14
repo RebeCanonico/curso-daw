@@ -1,4 +1,4 @@
-// 1-crear el array
+// 1-crear el array de las palabras
 const palabras = [
     "perro",
     "conejo",
@@ -8,89 +8,28 @@ const palabras = [
     "langostino",
     "murcielago"
 ]
-// declarar y guardar donde se muestra
+// 2-declaro variable que apunta a donde se imprime la palabra
 let displayPalabra = document.getElementById('palabra');
 
-// declarar que escoga una palabra aleatoria que sera un numero
-let random = Math.random();
-// palabra aleatoria * el largo de las palabras
-random = Math.random() * palabras.length;
-//math floor para quitarle los decimales
-random = Math.floor(Math.random() * palabras.length);
+// 3-declaro una variable en la cual tenga un numero entero aleatorio, que es el 
+// que nos va decir que palabra del array palabras es la selecionada en cada recarga
+// con math.floor redondeamos el valor de random para eliminar los decimales
+let random = Math.floor(Math.random() * palabras.length);
 
-// declaro que palabra es una palabra aleatoria
+// declaro una variable para que cada vez que carga la pagina, se selecciona un item del array con la posicion aleatoria de 0 -6
 let palabra = palabras[random];
-// declaro que longitud es el largo de la palabra
+
+// declaro una variable para contar el numero de letras que tiene la palabra
 let longitud = palabra.length;
 
-// declaro que texto son guiones
+
+// declaro una variable para imprimir los giones
 let texto = "";
-// declaro una variable para imprimir los guiones 
+// cuando ya tengo la palabra aleatoria creo un bucle para imprimirla
 for (let indice = 0; indice < longitud; indice++) {
 
+    //guarda un guion por cada letra
     texto += "_";
 }
-// como quiero que se muestre en pantalla, en este caso en modo texto, si pongo palabra me la muestra entera
+// imprimir la palabra en pantalla con el resultado de la variable texto
 displayPalabra.innerHTML = texto;
-
-
-// para hacer los botones, selecionamos todos los hijos del div con childNodes
-// 'tablero' es la id que le hemos dado al div.
-const botones = document.getElementById('tablero').childNodes;
-
-
-for (let i = 0; i < botones.length; i++) {
-    botones[i].addEventListener("click", juego);
-    
-}
-
-let aciertos = [];
-
-
-
-// let ejemplo = [
-//     "_",    //p
-//     "_",    //e
-//     "_",    //r
-//     "_",    //r
-//     "o"
-// ]
-
-
-
-function juego() {
-    // para que aparezca en la consola
-    console.log("Has pulsado un botón");
-
-    let letra = this.innerHTML;
-    // transformar la letra a minusculas
-    letra = letra.toLowerCase();
-
-   
-
-    
-
-    for (let i = 0; i < palabra.length; i++) {
-        console.log(palabra[i]);
-
-        if (palabra[i] == letra) {
-            console-log("¡Hay una coincidencia!");
-            aciertos[i] = letra;
-
-           
-        }else if (!aciertos[i]) {
-            aciertos[i] = "_";
-        }
-        console.log(texto);
-        console.log(aciertos);
-
-       
-    displayPalabra.innerHTML = texto;
-
-    console.log(letra);
-    
-    ganar();
-
-
-}
-}
