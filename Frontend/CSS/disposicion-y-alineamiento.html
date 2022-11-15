@@ -8,11 +8,16 @@
     <title>Layout</title>
     <link rel="stylesheet" href="../General.CSS">
 
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
     <style>
         .container {
             color: white;
             background: #00a6ff;
             text-align: center;
+
+            user-select: none;
         }
 
         .container div {
@@ -63,6 +68,123 @@
             color: white;
             font-size: 1.1rem;
         }
+        .divW {
+            width: 500px;
+            margin: auto;
+
+            border: 4px solid grey;
+        }
+        .divMW {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* --------position-------- */
+        .divRel {
+            position: relative;
+            left: 30px;
+            
+            border: 3px solid #00a6ff;
+        }
+        #btnTop {
+            border: none;
+            background-color: #00a6ff;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 7.5px;
+            font-size: 1.75rem;
+            cursor: pointer;
+
+            position: fixed;
+            bottom: 10px;
+            right: 30px;
+            /* es la prioridad que le damps al objeto para que el boton se vea por encima de todo */
+            z-index: 5;
+
+        }
+        .relative {
+            position: relative;
+            height: 200px;
+            width: 400px;
+
+        }
+        .divAbs {
+            position: absolute;
+            height: 100px;
+            width: 200px;
+
+            bottom: 10px;
+            right: 10px;
+
+        }
+        nav {
+            background: #00a6ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+
+            position: sticky;
+            top: 0;
+            /* es la prioridad que le damos a un objeto para uqe se vea por encima de los otros, a masyor numero mayor priorodad tendra */
+            z-index: 4;
+        }
+        nav div {
+            padding: 5px;
+            text-align: center;
+        }
+        nav a {
+            /* para quitarle el subrallado */
+            text-decoration: none;
+            color: aliceblue;
+            padding: 6px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav a:hover {
+            background-color: #00a6ff;
+        }
+        .contenedor-img {
+            height: 500px;
+            width: 100%;
+
+            background-image: url(https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-size: cover;
+            background-position: center;
+
+            position: relative;
+        }
+        .contenedor-img p{
+            color: white;
+            text-align: center;
+            width: 80px;
+
+            position: absolute;
+        }
+        /* a 5 pixeles de la derecha */
+        #right {
+            right: 5px;
+
+        }
+        /* al 50% de la derecha y al 50% del contenedor */
+        #center {
+            right: 50%;
+            bottom: 50%;
+            /* top: 50%; */
+            /* transform: translate(-50%, -50%); */
+        }
+        /* a 5 pixeles de la izquierda y en la posicion 0 */
+        #bottonL {
+            left: 5px;
+            bottom: 0;
+        }
+        /*  a 5 pixeles de la derecha y la posicion 0  */
+        #bottonR {
+            right: 5px;
+            bottom: 0;
+        }
+
+
     </style>
 </head>
 
@@ -179,9 +301,161 @@
         </div>
     </div>
 
+    <hr>
+
+    <h2>Anchura</h2>
+    <h3>width y max-width</h3>
+
+    <div class="container">
+        <p>
+            Como hemos mencionado anteriormente, un elemento del bloque 
+            siempre ocupa todo el ancho disponible.
+        </p>
+        <p>
+            Asignar una anchura con <code>width</code> evitara que un elemento de bloque se estire a 
+            los bordes de su contenedor. Entonces podremos asignar su margen <code>margin: auto</code> 
+            para centrar hotizontalmente el elemento respecto a su contenedor. El elemento pasara a ocupar el
+            ancho especificado y el resto del espacio sobrante sera repartido equitativamente entre
+            sus margenes.
+        </p>
+        <div class="divW">
+            Este elemento <code>div</code> tiene un ancho de 500px y un margin en auto.
+        </div>
+        <p>
+            El problema de esto es que al asignar un espacio fijo nos dara problemas en pantallas
+            pequeñas. El elemento se saldra del navegador y añaddira una barra de scroll horizontal       
+        </p>
+        <p>
+            Si por el contrario, usamos <code>max-width</code>, mejorara el manejo del navegador
+            de estos elementos. Esto es muy importante a la hora de construir sitios web para 
+            dispositivos pequeños.
+        </p>
+        <div class="divMW">
+            Este elemento <code>div</code> tiene un <code>max-widt</code> ancho de 500px y un margin en auto.
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>La propiedad <code>position</code></h2>
+    <p>
+        Esta propiedad define el metodo de posicionamiento de un elemento.
+    </p>
+    <p>
+        Hay 5 tipos de posición.
+    </p>
+    <ul>
+        <code>
+            <li>static</li>
+            <li>relative</li>
+            <li>fixed</li>
+            <li>absolute</li>
+            <li>sticky</li>
+        </code>
+    </ul>
+    <p>
+        Los elementos se posicionan con las propiedades top, left , right, bottom.
+        Sin embargo estas propiedades no funcionaran sin especificar primero la <code>position</code>.
+        Ademas, dependiendo del tipo de <code>position</code> las propiedades funcionaran de manera distinta.
+    </p>
+
+    <h3><code>position: static</code></h3>
+    <p>
+        Todos los elementos tienen este valor por defecto.
+    </p>
+    <p>
+        Las propiedades top, bottom, left y right no afectan a los elementos con
+        posición estática.
+    </p>
+
+    <h3><code>position: relative</code></h3>
+    <p>
+        Un elemento con este valor se posicionará de manera relativa a su posición normal. 
+        es decir, el centro del eje sera sobre si mismo.
+    </p>
+    <div class="divRel">
+        Este <code>div</code> tiene <code>position: relative</code>
+    </div>
+
+    <h3><code>Position: fixed</code></h3>
+    <p>
+        Un elemento con este valor se posicionará relativamente respecto a la pantalla. Lo que quiere decir
+        que tendra siempre la misma posicion incluso si scrolleamos la web.
+    </p>
+
+    <button id="btnTop" onclick="toTop()">
+        <i class="bi bi-arrow-bar-up"></i>
+    </button>
+
+    <h3><code>position: absolute</code></h3>
+    <p>
+        Un elemento con este valor se posicionara respecto a su contenedor posicionado (no estatico). 
+    </p>
+    <p>
+        Si un elemento absoluto no tiene ancestros posicionados, usará el body y actuará
+        como un <code>position: fixed</code>.
+    </p>
+
+    <!-- la posicion absoluta va respecto a la relativa -->
+    <div class="container relative">
+        Este elemento <code>div</code> tiene una <code>position: relative</code>
+        <div class="divAbs">
+            Este elemento <code>div</code> tiene una <code>position: absolute</code>
+        </div>
+    </div>
+
+    <!-- <div class="divAbs">
+        Esto es un div absoluto sin ancestro posicionado!!!!!!
+    </div> -->
+
+    <h3><code>position: sticky</code></h3>
+    <p>
+        Un elemento <code>sticky</code> alternará su comportamiento entre <code>relative</code> y 
+        <code>fixed</code> dependiendo de la posicion del scroll de la pagina.
+    </p>
+    <nav>
+        <div>
+            <a href="#">HOME</a>
+            <a href="#">Services</a>
+            <a href="#">Shop</a>
+        </div>
+        <div>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <hr>
+
+    <h3>Posicionar texto respecto a una imagen</h3>
+
+    <div class="contenedor-img">
+        <p>Top left</p>
+        <p id="right">Top Right</p>
+        <p id="center">Center</p>
+        <p id="bottonL">Botton Left</p>
+        <p id="bottonR">Botton Right</p>
+    </div>
+
+
+    <pre>
 
 
 
+
+
+        ... 
+
+
+
+
+
+
+        ..... 
+
+
+        ..
+    </pre>
 
 </body>
 <script>
@@ -204,6 +478,21 @@
         quitarFoto.style.display = 'block';
         esconderFoto.style.visibility = 'visible';
     }
+
+    // botón to top
+    // con esta funcion al hacer clic nos vamos a la parte superior de la pantalla, con la posicion 0
+    function toTop() {
+        // Opera, Chrome, Edge, Firefox
+        document.documentElement.scrollTop = 0;
+
+        // Safari
+        document.body.scrollTop = 0;
+    }
+    
+    
+
+
+
 </script>
 
 </html>
