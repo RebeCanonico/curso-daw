@@ -1,0 +1,23 @@
+
+#container {
+    width: 250px;
+    left: 300px;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+}
+#center {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+#right {
+    display: flex;
+    justify-content: right;
+    
+    
+}
