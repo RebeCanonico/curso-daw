@@ -1,23 +1,100 @@
+@import url('https://fonts.cdnfonts.com/css/sansbetween');
+@import url('https://fonts.cdnfonts.com/css/digital-numbers');
 
-#container {
-    width: 250px;
-    left: 300px;
+* {
+    font-family: 'SansBetween', sans-serif;
 }
 
-#top {
+body {
+    background: linear-gradient(90deg, #1e2831, #00a6ff);
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+
+    border-radius: 15px;
+    padding: 10px 0;
+    background: white;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .display, 
+.container .operators {
+    width: 100%;
+    margin: 10px 20px;
     display: flex;
     justify-content: space-between;
 }
-#center {
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-    
+
+.container button {
+    width: 50px;
+    height: 30px;
+    border-radius: 1px;
 }
-#right {
+.container button:hover {
+    cursor: pointer;
+    opacity: 0.65;
+}
+
+.display input {
+    width: 100%;
+    height: 30px;
+
+    font-family: 'Digital Numbers', sans-serif;
+    font-weight: bold;
+    color: #1e2831;
+    background: #e8ffaf;
+                                        
+}
+
+.operators button {
+    background: #1e2831;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.container .keys {
+    width: 100%;
+    margin: 0 20px;
     display: flex;
-    justify-content: right;
-    
-    
+    justify-content: space-between;
+}
+
+.container .numbers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 20px;
+}
+.numbers button {
+    margin-bottom: 10px;
+}
+.numbers .clear {
+    color: white;
+    background: tomato;
+    border: none;
+}
+
+.container .equal {
+    height: 100%;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.equal button {
+    height: 100%;
+    margin-bottom: 10px;
+    background: #00a6ff;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
 }
