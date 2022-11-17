@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<style>
+    .container {
+        width: 250px;
+    }
+
+    .pantalla {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .pantalla input {
+        width: 100%;
+        background-color: black;
+        color: aliceblue;
+    }
+
+    div {
+        border: 2px solid black;
+    }
+
+    .teclas {
+        display: flex;
+    }
+
+    .teclas div {
+        display: flex;
+        flex-direction: column;
+        width: 25%; /* necesito saber porque */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="pantalla">
+            <input type="text">
+        </div>
+        <div class="teclas">
+            <div>
+                <button id="suma">+</button>
+                <button>7</button>
+                <button>4</button>
+                <button>1</button>
+                <button>0</button>
+            </div>
+            <div>
+                <button id="resta">-</button>
+                <button>8</button>
+                <button>5</button>
+                <button>2</button>
+                <button>.</button>
+            </div>
+            <div>
+                <button id="multi">&times;</button>
+                <button>9</button>
+                <button>6</button>
+                <button>3</button>
+                <button>c</button>
+            </div>
+            <div>
+                <button id="division">&#247;</button>
+                <button style="height: 80%;">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+   
+</script>
+
+</html>

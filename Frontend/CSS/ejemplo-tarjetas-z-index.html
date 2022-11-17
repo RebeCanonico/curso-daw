@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarjetas</title>
+    <style>
+        .container {
+            max-width: 600px;
+            position: relative;
+        }
+        .card {
+            border: 1px solid black;
+            background: rgb(50, 50, 50);
+            color: white;
+            text-align: center;
+            /* transition: all .3s; */
+
+            position: absolute;
+            width: 25%;
+        }
+        .card.one {
+            top: 0;
+            left: 0;
+
+        }
+        .card.two {
+            top: 0;
+            left: 25%;
+        }
+        .card.three {
+            top: 0;
+            left: 50%;
+        }
+        .card.four {
+            top: 0;
+            left: 75%;
+        }
+        .card h2 {
+            margin-top: 0;
+            height: 30px;
+        }
+        .card .red {
+            background: tomato;
+
+        }
+        .card .blue {
+            background: cornflowerblue;
+
+        }
+        .card .green {
+            background: lightgreen;
+
+        }
+        .card .yellow {
+            background: rgb(230, 230, 2);
+
+        }
+        .front {
+            background: #ddd;
+            color: black;
+            text-align: center;
+
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            min-height: 112px;
+            box-sizing: border-box;
+            /* z-index: 1; */
+        
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="card one" >
+            <h2 class="red">1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Consequatur, perspiciatis?
+            </p>
+        </div>
+        <div class="card two">
+            <h2 class="blue">2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Consequatur, perspiciatis?
+            </p>
+        </div>
+        <div class="card three">
+            <h2 class="green">3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Consequatur, perspiciatis?
+            </p>
+        </div>
+        <div class="card four">
+            <h2 class="yellow">4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Consequatur, perspiciatis?
+            </p>
+        </div>
+
+        <div class="front" id="front">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloremque,
+                ratione unde nihil iure maxime deserunt facere dignissimos eaque saepe.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis doloremque,
+                ratione unde nihil iure maxime deserunt facere dignissimos eaque saepe.
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    const cards = document.getElementsByClassName('card');
+    const front = document.getElementById('front')
+
+    // un bucle que asigne aventos a las tarjetas
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('mouseenter', showCard);
+        // mouseenter es el evento de hover, se activa al pasar el cursor sobre el elemento
+    }
+    // 
+    function showCard() {
+        for (let i = 0; i < cards.length; i++) {
+            // primero se ocultan todas las tarjetas
+            cards[i].style.zIndex = 0;
+            
+        }
+        // y finalmente mostramos la nuestra
+        this.style.zIndex = 5;
+
+        // la tarjeta desaparece transcurridos x milisegundos
+        // setTimeout(() => {
+        //     this.style.zIndex = 0;
+        // }, 3000);
+    }
+   
+    front.onclick = () => {
+        for (let i = 0; i < cards.length; i++) {
+            // primero se ocultan todas las tarjetas
+            cards[i].style.zIndex = 0;
+            
+        }
+    }
+            
+    
+        
+
+
+
+</script>
+
+</html>

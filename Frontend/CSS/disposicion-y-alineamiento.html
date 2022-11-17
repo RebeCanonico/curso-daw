@@ -32,12 +32,15 @@
         #hideShow {
             display: none;
         }
+
         .borde {
             border: 2px solid #00a6ff;
         }
+
         .bloque {
             display: block;
         }
+
         .linea {
             display: inline;
         }
@@ -48,11 +51,13 @@
             border: 2px solid #00a6ff;
             width: 100%;
         }
+
         .flex-container {
             display: flex;
             justify-content: center;
-            
+
         }
+
         .img {
             height: 150px;
             background-image: url(https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg);
@@ -60,6 +65,7 @@
             /* cover es para ajustar la imagen y se vea completa */
             background-size: cover;
         }
+
         .flex-container button {
             background: #00a6ff;
             border: none;
@@ -68,12 +74,14 @@
             color: white;
             font-size: 1.1rem;
         }
+
         .divW {
             width: 500px;
             margin: auto;
 
             border: 4px solid grey;
         }
+
         .divMW {
             max-width: 500px;
             margin: auto;
@@ -83,9 +91,10 @@
         .divRel {
             position: relative;
             left: 30px;
-            
+
             border: 3px solid #00a6ff;
         }
+
         #btnTop {
             border: none;
             background-color: #00a6ff;
@@ -102,12 +111,14 @@
             z-index: 5;
 
         }
+
         .relative {
             position: relative;
             height: 200px;
             width: 400px;
 
         }
+
         .divAbs {
             position: absolute;
             height: 100px;
@@ -117,6 +128,7 @@
             right: 10px;
 
         }
+
         nav {
             background: #00a6ff;
             display: flex;
@@ -129,10 +141,12 @@
             /* es la prioridad que le damos a un objeto para uqe se vea por encima de los otros, a masyor numero mayor priorodad tendra */
             z-index: 4;
         }
+
         nav div {
             padding: 5px;
             text-align: center;
         }
+
         nav a {
             /* para quitarle el subrallado */
             text-decoration: none;
@@ -141,9 +155,11 @@
             margin: 0;
             box-sizing: border-box;
         }
+
         nav a:hover {
             background-color: #00a6ff;
         }
+
         .contenedor-img {
             height: 500px;
             width: 100%;
@@ -154,18 +170,21 @@
 
             position: relative;
         }
-        .contenedor-img p{
+
+        .contenedor-img p {
             color: white;
             text-align: center;
             width: 80px;
 
             position: absolute;
         }
+
         /* a 5 pixeles de la derecha */
         #right {
             right: 5px;
 
         }
+
         /* al 50% de la derecha y al 50% del contenedor */
         #center {
             right: 50%;
@@ -173,15 +192,70 @@
             /* top: 50%; */
             /* transform: translate(-50%, -50%); */
         }
+
         /* a 5 pixeles de la izquierda y en la posicion 0 */
         #bottonL {
             left: 5px;
             bottom: 0;
         }
+
         /*  a 5 pixeles de la derecha y la posicion 0  */
         #bottonR {
             right: 5px;
             bottom: 0;
+        }
+
+        /* z-index */
+        .z-container {
+            color: white;
+            position: relative;
+
+            margin-bottom: 220px;
+            border: 1px solid black;
+        }
+
+        .z-container p {
+            background: rgba(0, 0, 0, 0.7);
+            
+        }
+
+        .z-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0, 9;
+        }
+        .black-box {
+            height: 100px;
+            /* border: 2px solid black; */
+            background: rgba(0, 0, 0, 0.8);
+            color: aliceblue;
+
+            position: absolute;
+            z-index: 1;
+            margin: 30px;
+        }
+        .green-box {
+            height: 100px;
+            background: rgb(40, 241, 60, 0.8);
+            color: aliceblue;
+
+            position: absolute;
+            z-index: 2;
+            top: -15px;
+            right: 25px;
+            height: 150px;
+        }
+        .gray-box {
+            height: 100px;
+            background: lightgray;
+            color: black;
+
+            position: absolute;
+            z-index: 3;
+            top: 120px;
+            right: 200px;
         }
 
 
@@ -220,7 +294,7 @@
 
     <h2>Elementos de bloque</h2>
     <p>
-        Los elementos de bloque siempre empiezan en una nueva linea y toman 
+        Los elementos de bloque siempre empiezan en una nueva linea y toman
         todo el ancho disponible.
     </p>
     <div class="borde">
@@ -268,8 +342,8 @@
         <li class="linea borde"><a href="">Services</a></li>
     </ul>
     <p>Ejemplo de mostrar varios span como bloques</p>
-    <span class="bloque borde">Esta es una serie </span> 
-    <span class="bloque borde">de elementos span </span> 
+    <span class="bloque borde">Esta es una serie </span>
+    <span class="bloque borde">de elementos span </span>
     <span class="bloque borde">puestos en bloque </span>
 
     <h2>Diferencias entre <code>display: none;</code>y <code>visibility: hidden;</code></h2>
@@ -279,7 +353,7 @@
         elemento no estubiera ahí.
     </p>
     <p>
-        Al ocultar un elemento con <code>visibility: hidden</code> el elemento no se mostrará 
+        Al ocultar un elemento con <code>visibility: hidden</code> el elemento no se mostrará
         pero el espacio que ocupa quedará en blanco.
     </p>
 
@@ -308,12 +382,12 @@
 
     <div class="container">
         <p>
-            Como hemos mencionado anteriormente, un elemento del bloque 
+            Como hemos mencionado anteriormente, un elemento del bloque
             siempre ocupa todo el ancho disponible.
         </p>
         <p>
-            Asignar una anchura con <code>width</code> evitara que un elemento de bloque se estire a 
-            los bordes de su contenedor. Entonces podremos asignar su margen <code>margin: auto</code> 
+            Asignar una anchura con <code>width</code> evitara que un elemento de bloque se estire a
+            los bordes de su contenedor. Entonces podremos asignar su margen <code>margin: auto</code>
             para centrar hotizontalmente el elemento respecto a su contenedor. El elemento pasara a ocupar el
             ancho especificado y el resto del espacio sobrante sera repartido equitativamente entre
             sus margenes.
@@ -323,11 +397,11 @@
         </div>
         <p>
             El problema de esto es que al asignar un espacio fijo nos dara problemas en pantallas
-            pequeñas. El elemento se saldra del navegador y añaddira una barra de scroll horizontal       
+            pequeñas. El elemento se saldra del navegador y añaddira una barra de scroll horizontal
         </p>
         <p>
             Si por el contrario, usamos <code>max-width</code>, mejorara el manejo del navegador
-            de estos elementos. Esto es muy importante a la hora de construir sitios web para 
+            de estos elementos. Esto es muy importante a la hora de construir sitios web para
             dispositivos pequeños.
         </p>
         <div class="divMW">
@@ -370,7 +444,7 @@
 
     <h3><code>position: relative</code></h3>
     <p>
-        Un elemento con este valor se posicionará de manera relativa a su posición normal. 
+        Un elemento con este valor se posicionará de manera relativa a su posición normal.
         es decir, el centro del eje sera sobre si mismo.
     </p>
     <div class="divRel">
@@ -389,7 +463,7 @@
 
     <h3><code>position: absolute</code></h3>
     <p>
-        Un elemento con este valor se posicionara respecto a su contenedor posicionado (no estatico). 
+        Un elemento con este valor se posicionara respecto a su contenedor posicionado (no estatico).
     </p>
     <p>
         Si un elemento absoluto no tiene ancestros posicionados, usará el body y actuará
@@ -410,7 +484,7 @@
 
     <h3><code>position: sticky</code></h3>
     <p>
-        Un elemento <code>sticky</code> alternará su comportamiento entre <code>relative</code> y 
+        Un elemento <code>sticky</code> alternará su comportamiento entre <code>relative</code> y
         <code>fixed</code> dependiendo de la posicion del scroll de la pagina.
     </p>
     <nav>
@@ -436,6 +510,45 @@
         <p id="bottonL">Botton Left</p>
         <p id="bottonR">Botton Right</p>
     </div>
+    <hr>
+
+    <h2>El posicionamiento vertical con <code>z-index</code> </h2>
+
+    <p>
+        En z-index determina el orden en que se amontonan los elementos.
+    </p>
+    <p>
+        cuando los elementos se posicionan, puede que se monten sobre otros.
+    </p>
+    <p>
+        Esta propiedad determina en que orden se amontonan los elementos. es decir, que elementos van por
+        encima o debajo de los otros
+    </p>
+    <div class="z-container">
+        <h1>Esto es un titulo con z-index de -1</h1>
+        <p>
+            He aqui una img
+        </p>
+        <img src="https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="" width="100%">
+        <p>
+            <b>Nota:</b>en <code>z-index</code> solo funciona en elementos posicionados o en elementos
+            flexibles (son aquellos descendientes de contenedores con <code>display: flex</code> )
+        </p>
+    </div>
+
+    <h3>Otro ejemplo de <code>z-index</code></h3>
+    <div class="z-container">
+        <div class="black-box">
+            <p>Caja negra con un <code>z-index</code> de 1</p>
+        </div>
+        <div class="green-box">
+            <p>Caja verde con un <code>z-index</code> de 2</p>
+        </div>
+        <div class="gray-box">
+            <p>Caja gris con un <code>z-index</code> de 3</p>
+        </div>
+    </div>
 
 
     <pre>
@@ -456,6 +569,8 @@
 
         ..
     </pre>
+
+
 
 </body>
 <script>
@@ -488,8 +603,8 @@
         // Safari
         document.body.scrollTop = 0;
     }
-    
-    
+
+
 
 
 

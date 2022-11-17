@@ -52,26 +52,26 @@ function operate() {
 
 
 
-    switch (operator) {
-        case '+':
+    // switch (operator) {
+    //     case '+':
 
-            console.log('has pulsado la suma');
+    //         console.log('has pulsado la suma');
 
-            break;
-        case '-':
+    //         break;
+    //     case '-':
 
-            break;
-        case '×':
+    //         break;
+    //     case '×':
 
-            break;
-        case '÷':
+    //         break;
+    //     case '÷':
 
-            break;
+    //         break;
 
-        default:
+    //     default:
 
-            break;
-    }
+    //         break;
+    // }
 }
 result.onclick = () => {
     value2 = parseInt(input.value);
