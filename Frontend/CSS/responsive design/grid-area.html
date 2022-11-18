@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <link rel="stylesheet" href="../../General.CSS">
+
+    <style>
+        body {
+            margin: 0;
+            /* asi ponemo9s la altura entera de la imagen nos ocupa el 100% de la pantalla */
+            height: 100vh;
+        }
+        .grid-item {
+            font-size: 30px;
+            padding: 20px 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .header {
+            grid-area: header;
+            background-color: #5ed2af;
+            color: white;
+
+        }
+        .navbar {
+            grid-area: navbar;
+            font-size: 10px;
+            background-color: #323232;
+            color: white;
+
+        }
+        .section {
+            grid-area: section;
+            border: 1px solid black;
+            font-size: 25px;
+
+        }
+        .side-menu {
+            grid-area: side-menu;
+            border: 1px solid black;
+            font-size: 15px;
+
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #b9b9b9;
+
+        }
+        .grid-area-container {
+            display: grid;
+            grid-template-areas: 
+            'header header header'
+            'navbar navbar navbar'
+            'side-menu section section'
+            'side-menu footer footer'
+            ;
+            grid-template-rows: 
+            3fr
+            1fr
+            5fr
+            2fr
+            ;
+            grid-template-columns: 
+            1fr
+            2fr
+            2fr
+            ;
+        }
+
+
+    </style>
+</head>
+<body class="grid-area-container">
+    
+
+    
+        <div class="grid-item header">Header</div>
+        <div class="grid-item navbar">Navbar</div>
+        <div class="grid-item section">Section
+            <h1>La propiedad grid-area</h1>
+
+    <p>
+        Se pueden nombrar los elementos de un grid para, posteriormente, asignarles el área a ocupar.
+    </p>
+        </div>
+        <div class="grid-item side-menu">Side Menu</div>
+        <div class="grid-item footer">Footer</div>
+    
+
+
+
+</body>
+</html>

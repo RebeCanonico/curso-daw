@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo media querie</title>
+
+    <style>
+        .container {
+            overflow: auto;
+        }
+
+        #main {
+            margin-left: 4px;
+        }
+
+        #left-sidebar {
+            float: none;
+            width: auto;
+        }
+
+        #menu-list {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-item {
+            background: cornflowerblue;
+            border: 1px solid #d4d4d4;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+        }
+
+        @media screen and (min-width: 600px) {
+            #left-sidebar {
+                width: 200px;
+                float: left;
+            }
+
+            #main {
+                margin-left: 216px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- todo esto es alineamiento. para que se vea de una manera en ordenador y de ootra en movil -->
+    <div class="container">
+        <div id="left-sidebar">
+            <ul id="menu-list">
+                <li class="menu-item">Un boton del menú</li>
+                <li class="menu-item">Un boton del menú</li>
+                <li class="menu-item">Un boton del menú</li>
+                <li class="menu-item">Un boton del menú</li>
+                <li class="menu-item">Un boton del menú</li>
+            </ul>
+        </div>
+
+
+
+        <div id="main">
+            <h1>Ejemplo de menu responsive</h1>
+            <p>
+                En pantallas grandes (de 600px o más) el menú se acoplara a la izquierda de la pantalla.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

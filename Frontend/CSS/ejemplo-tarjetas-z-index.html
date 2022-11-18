@@ -124,6 +124,8 @@
     // un bucle que asigne aventos a las tarjetas
     for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener('mouseenter', showCard);
+        cards[i].addEventListener('click', showCard);
+        // añadimos el evento clic para que pueda funcionar en moviles.
         // mouseenter es el evento de hover, se activa al pasar el cursor sobre el elemento
     }
     // 
