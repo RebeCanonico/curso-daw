@@ -1,0 +1,167 @@
+.animado {
+    height: 100px;
+    width: 100px;
+    background-color: cornflowerblue;
+
+    /* para que funcione la animacion hay que asignarsela al elemento (cambioColor)*/
+    animation-name: cambioColor;
+    /* como minimo, ademas del nombre hay que especificar la duración */
+    animation-duration: 5s;
+}
+
+@keyframes cambioColor {
+    /* como minimo debe especificarse el estado inicial y el final */
+
+    /* estado inicial */
+    /* from y to es de esto a esto */
+    from {
+        background-color: cornflowerblue;
+    }
+
+    /* estado final */
+    to {
+        background-color: tomato;
+    }
+}
+
+/* con distintos estados */
+.estados {
+    height: 100px;
+    width: 100px;
+    background-color: darkcyan;
+    position: relative;
+
+    animation: cambioEstado 5s;
+}
+
+@keyframes cambioEstado {
+
+    /* se pueden asignar porcentajes para definir distintos estados */
+    0% {
+        background-color: darkcyan;
+        width: 100px;
+        left: 0%;
+        top: 0;
+    }
+
+    25% {
+        background-color: aquamarine;
+        width: 200px;
+    }
+
+    50% {
+        background-color: blueviolet;
+        width: 100px;
+        left: 50%;
+    }
+
+    75% {
+        background-color: blanchedalmond;
+        border-radius: 50%;
+        left: 50%;
+        top: 300px;
+    }
+
+    100% {
+        background-color: darkolivegreen;
+        left: 0;
+    }
+}
+
+.circulo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: palevioletred;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 0;
+
+    animation: circuloTriangulo 6s;
+    animation-delay: 4s;
+    animation-iteration-count: 4;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+
+}
+
+@keyframes circuloTriangulo {
+    0% {
+        left: 50%;
+        top: 0;
+    }
+
+    33% {
+        left: 90%;
+        top: 200px;
+    }
+    66% {
+        left: 10px;
+        top: 200px;
+    }
+    100% {
+        left: 50%;
+        top: 0;
+    }
+}
+
+/* botom */
+.boton {
+    position: relative;
+
+    background-color: #17ab2b;
+    color: white;
+    font-weight: bold;
+
+    padding: 5px 10px;
+    width: 80px;
+
+    text-align: center;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 0 0 rgb(180, 180, 180);
+}
+.boton:active {
+    top: 5px;
+    box-shadow: 0 0px 0 0 rgb(180, 180, 180);
+}
+
+/* velocidades */
+.velocidades {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    text-align: center;
+
+    animation: curvaVelocidad 5s;
+    animation-fill-mode: forwards;
+    
+}
+#div1 {
+    animation-timing-function: linear;
+}
+#div2 {
+    animation-timing-function: ease;
+}
+#div3 {
+    animation-timing-function: ease-in;
+}
+#div4 {
+    animation-timing-function: ease-out;
+}
+#div5 {
+    animation-timing-function: ease-in-out;
+}
+@keyframes curvaVelocidad {
+    from {
+        width: 100px;
+    }
+
+    to {
+        width: 350px;
+    }
+}
