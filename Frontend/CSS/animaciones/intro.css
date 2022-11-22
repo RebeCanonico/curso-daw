@@ -165,3 +165,21 @@
         width: 350px;
     }
 }
+
+
+.div-fill {
+    width: 50px;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}
+
+#fillForwards {
+    animation-fill-mode: forwards;
+}
+#fillBackwards {
+    animation-fill-mode: backwards;
+}
+#fillBoth {
+    animation-fill-mode: both;
+}

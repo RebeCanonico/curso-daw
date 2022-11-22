@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de elementos animados</title>
+    <link rel="stylesheet" href="../../../General.CSS">
+    <link rel="stylesheet" href="icono-cargando.html">
+
+    <style>
+        .wait {
+            position: relative;
+            background: #161616;
+            width: 40px;
+            height: 40px;
+            padding: 6px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+            /* recuerda con con 'border radius 50%' le das forma de circulo */
+            margin-bottom: 50px;
+        }
+
+        .wait div:nth-child(1) {
+            animation: rotate 1.5s linear infinite;
+            width: 30px;
+            height: 30px;
+            border: 5px solid #5adae1;
+            border-bottom: 5px dashed transparent;
+            border-radius: 50%;
+        }
+
+        .wait div:nth-child(2) {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #161616;
+            padding: 0;
+            height: 20px;
+
+            color: #5adae1;
+            padding: 0 5px;
+            border-radius: 5px;
+        }
+
+        .wait p {
+            font-size: 14px;
+            background-color: #161616;
+            text-shadow: 0px 0px 5px #5adae1;
+            animation: blur 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateZ(0);
+            }
+
+            50% {
+                transform: rotateZ(180deg);
+            }
+
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes blur {
+            0% {
+                filter: blur(0px);
+                text-shadow: 0px 0px 0px #5adae1;
+            }
+
+            25% {
+                /* filter: blur(.6px); */
+                text-shadow: 0px 0px 10px #5adae1;
+            }
+
+            50% {
+                filter: blur(.25px);
+                text-shadow: 0px 0px 3px #5adae1;
+            }
+
+            75% {
+                filter: blur(.45px);
+                text-shadow: 0px 0px 8px #5adae1;
+            }
+        }
+
+
+        button.menu {
+            display: flex;
+            flex-direction: column;
+            width: 45px;
+            height: 24px;
+            border: 0;
+            background: transparent;
+
+            gap: 8px;
+            /* gap cpn flex hace que los items tengan espaciado */
+        }
+
+        .menu div {
+            background: black;
+            height: 2px;
+            width: 100%;
+            transform-origin: left;
+            transition: all .5s;
+        }
+
+        .menu:hover div:first-child {
+            transform: rotate(38deg);
+        }
+
+        .menu:hover div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu:hover div:nth-child(3) {
+            transform: rotate(-38deg);
+        }
+
+        .boton {
+            position: relative;
+
+            background-color: #a617ab;
+            color: white;
+            font-weight: bold;
+
+            padding: 5px 10px;
+            width: 90px;
+            height: 30px;
+
+            text-align: center;
+            border-radius: 10px;
+
+            box-shadow: 0 5px 0 0 rgb(180, 180, 180);
+
+            animation: cambioColor 5s infinite;
+        }
+
+        .boton:active {
+            top: 5px;
+            box-shadow: 0 0px 0 0 rgb(180, 180, 180);
+        }
+
+        @keyframes cambioColor {
+            /* 0% {
+                
+            }
+            50% {
+                
+            } */
+            100% {
+                background-color: #161616;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elementos animados con CSS</h1>
+
+    <h3>Símbolo de carga/espera</h3>
+
+    <div class="wait">
+        <div></div>
+        <div>
+            <p>Cargando...</p>
+        </div>
+    </div>
+    <hr>
+    <div class="wait reloj">
+
+        <svg xmlns=""></svg>
+
+    </div>
+
+    <hr>
+
+    <h3>Botón de hambugesa(menú)</h3>
+    <button class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <hr>
+
+    <button class="boton">Click!</button>
+
+    <hr>
+
+    <!-- <h3>Texto animado</h3>
+    <h1 class="brillante">Goza de mi flow</h1> -->
+
+
+
+
+</body>
+
+</html>
