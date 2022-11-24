@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .grid-container {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+
+            border: px solid #303030aa;
+            border-radius: 20px;
+
+
+            width: 400px;
+            height: 200px;
+
+            background: #303030aa;
+            gap: 20px;
+            padding: 40px 30px;
+
+
+
+        }
+
+        .grid-container .fondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: #303030aa; */
+        }
+
+        .boton {
+            position: relative;
+            z-index: 1;
+
+            background-color: rgb(180, 180, 180);
+            color: black;
+            font-weight: bold;
+
+            padding: 5px 10px;
+            width: 100px;
+            height: 40px;
+
+            text-align: center;
+            border-radius: 10px;
+
+            box-shadow: 0 10px 0 0 rgb(180, 180, 180);
+        }
+
+        .boton.rosa {
+            background-color: pink;
+        }
+
+        .boton.morado {
+            background-color: purple;
+        }
+
+        .boton.naranja {
+            background-color: orange;
+        }
+
+        .boton.amarillo {
+            background-color: yellow;
+        }
+
+        .boton.verde {
+            background-color: lightgreen;
+        }
+
+        .boton.azul {
+            background-color: lightblue;
+        }
+
+        .boton:active {
+            top: 5px;
+            box-shadow: 0 0px 0 0 rgb(180, 180, 180);
+        }
+
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h3>Click en el botón para cambiar el fondo de pantalla</h3> -->
+    <div class="grid-container">
+        <button type="button" onclick="myFunction('pink')" class="boton rosa">Click</button>
+        <button type="button" onclick="myFunction('purple')" class="boton morado">Click</button>
+        <button type="button" onclick="myFunction('yellow')" class="boton amarillo">Click</button>
+        <button type="button" onclick="myFunction('lightgreen')" class="boton verde">Click</button>
+        <button type="button" onclick="myFunction('lightblue')" class="boton azul">Click</button>
+        <button type="button" onclick="myFunction('orange')" class="boton naranja">Click</button>
+        <div class="fondo" onclick="colorReset()"></div>
+    </div>
+</body>
+<script>
+
+    // funcion sencilla para pocos botones
+    function myFunction(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
+
+</html>

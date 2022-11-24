@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a JavaScript</title>
+    <link rel="stylesheet" href="../General.CSS">
+    <link rel="stylesheet" href="../CSS/animaciones/ejercicios/boton-magico.css">
+<!-- css con estilos animados para los botones -->
+    <style>
+        body {
+            background-color: rgb(239, 191, 175)
+        }
+        button {
+            background-color: rgb(207, 28, 58);
+        }
+        #bulbOne {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Introducción a JavaScript</h1>
+
+    <p>
+        JavaScript es el lenguaje de programación de la web.
+        Nos permite crear interwaciones usuario-web.
+    </p>
+    <p>Ejemplos:</p>
+
+    <!-- Camel cased: las variables o definiciones se nombrarán SIEMPRE 
+    empezando por minúscula, sin usar espacios ni símbolos y separando
+    las palabras dediante el uso de mayúsculas (la primera letra de cada
+    palabra a partir de la segunda) "pedroPicapiedra" "ejemploSencilloDeNombreDeVariable". -->
+    <p id="pColor">
+        Pulsa el botón de abajo para resaltar este párrafo.
+    </p>
+    <!-- onclick indica que cuando se pulse el botón se ejecutará el código
+    que se indica. en este caso, la función -->
+    <button onclick="colorChange()">Color</button>
+    <hr>
+    <p id="pDate">
+        Pulsa el botón inferior para mostrar la fecha y hora actuales.
+    </p>
+    <button onclick="showDate()">Mostrar fecha</button>
+
+    <hr>
+
+    <p id="pHide">
+        Pulsa el botón inferior para ocultar/mostrar este párrafo.
+    </p>
+    <button onclick="hideShow()">Mostrar/Ocultar</button>
+
+    <hr>
+
+    <p>
+        Pulsa el boton para encender la bombilla
+    </p>
+    <img id="bulb" src="../RECURSOS/bombillaapagada.gif" alt="">
+    <!-- /* <img id="buldOn" src="../RECURSOS/bombillaencendida.gif" alt=""> */
+    <button onclick="buldSwitch()">Encender la luz</button> -->
+    <button onclick="lightSwitch()">Interruptor de la luz</button>
+
+
+</body>
+<script src="intro-js.js"></script>
+
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* tema oscuro */
+        body {
+            color: rgb(220, 220, 220);
+            background: rgb(40, 40, 40);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            /* height: 200px; */
+            padding: 20px;
+            text-align: center;
+            background: #161616;
+        }
+        footer {
+            min-height: 100px;
+            /* tiene libertad de expandirse pero como minimo ocupa 100px */
+        }
+        .parallax {
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* con background attachment hacemos el efecto (parallax) de pasar y que las imagenes y estas se queden fijas. solo moviendose el texto */
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* todos estos backgroud son para que la imagen se vea corrctamente centrada y con su tamaño completo. si no se ajusta a la izquierda */
+        }
+        .parallax div {
+            background: rgba(40, 40, 40, 0.7);
+            max-width: 250px;
+            padding: 5px 10px;
+        }
+        .parallax.uno {
+            background-image: url(../../../RECURSOS/parallax/pexels-photo-3355788.jpeg);
+        }
+        .parallax.dos {
+            background-image: url(../../../RECURSOS/parallax/pexels-photo-13894711.jpeg);
+        }
+        .parallax.tres {
+            background-image: url(../../../RECURSOS/parallax/pexels-photo-14324926.jpeg);
+        }
+
+        @media screen and (min-width: 720px) {
+            .parallax {
+                height: 900px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Efecto de Parallax</h1>
+    </header>
+
+    <div class="parallax uno">
+        <div><h2>Días de playa</h2></div>
+    </div>
+    <section>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus nisi minus distinctio dolorum eveniet
+            impedit, similique repellat expedita saepe vel velit voluptate molestiae quos totam explicabo, est officiis
+            cum. Facere?</p>
+    </section>
+
+    <div class="parallax dos">
+        <div><h2>Deporte en la playa</h2></div>
+    </div>
+    <section>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae cupiditate labore culpa quasi animi saepe
+            ipsum veritatis commodi quis voluptate, maiores ullam velit consequatur sunt, omnis voluptatibus molestias
+            distinctio quas?</p>
+    </section>
+
+    <div class="parallax tres">
+        <div><h2>Relájate</h2></div>
+    </div>
+    <footer></footer>
+
+</body>
+
+</html>
