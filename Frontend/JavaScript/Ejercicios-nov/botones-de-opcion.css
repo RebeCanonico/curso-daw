@@ -51,8 +51,8 @@ label {
 
 .widget {
     background: #17181a;
-    width: calc(var(--tab-width) * 3);
-    /* el ancho de la tabla declarado en la variable por 3 = 900px */
+    width: var(--tab-width);
+    
     border-radius: 8px;
 }
 
@@ -69,6 +69,7 @@ label {
     display: flex;
     align-items: center;
     width: calc(var(--tab-width) * 3);
+    /* el ancho de la tabla declarado en la variable por 3 = 900px */
     transition: 0.3s;
 }
 
@@ -95,6 +96,11 @@ label {
     transition: 0.2s;
 }
 
+/* El :checkedselector coincide con cada elemento <input> marcado (solo para botones de radio y casillas de verificación) y elemento <option>.
+con <input type = "radio"> para indicar que el boton está activado. */
+
+
+/* movimiento de la linea morada */
 .tabs input:nth-child(1):checked ~.buttons .underline {
     translate: 0 0;
 }
@@ -107,12 +113,15 @@ label {
     translate: calc(var(--button-width) * 2) 0;
 }
 
+/* los botones con opacidad cuando no estan seleccionados */
 .tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
 .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
 .tabs input:nth-child(3):checked ~ .buttons label:nth-child(3) {
     opacity: 1;
 }
 
+
+/* movimiento del contenido */
 .tabs input:nth-child(1):checked ~ .content > .content-inner {
     translate: 0 0;
 }

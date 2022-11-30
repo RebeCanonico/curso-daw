@@ -1,0 +1,24 @@
+:root {
+    --border-color: linear-gradient(to right, tomato 0%, gold 100%);
+    --card-color: #222;
+}
+
+.card {
+    background: var(--border-color);
+    /* La relación de aspecto de un elemento describe la relación proporcional entre su ancho y su altura. */
+    aspect-ratio: 10/16;
+    width: 200px;
+    padding: 5px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.card-body {
+    background: var(--card-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
