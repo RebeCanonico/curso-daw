@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtro y búsqueda de productos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="lista-productos.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search product name here.."
+        />
+        <button id="search">Search</button>
+      </div>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">
+            All
+        </button>
+        <button class="button-value" onclick="filterProduct('Topwear')">
+          Topwear
+        </button>
+        <button class="button-value" onclick="filterProduct('Bottomwear')">
+          Bottomwear
+        </button>
+        <button class="button-value" onclick="filterProduct('Jacket')">
+          Jacket
+        </button>
+        <button class="button-value" onclick="filterProduct('Watch')">
+          Watch
+        </button>
+      </div>
+      <div id="products">
+        <!-- esto es lo que escribiria cada vuelta del bucle que recorre los productos -->
+        <!-- <div class="card topwear hide">
+            <div class="image-container">
+                <img src="white-tshirt.jpg" alt="">
+            </div>
+            <div class="container">
+                <h5 class="product-name">REGULAR WHITE T-SHIRT</h5>
+                <h6>$ 30</h6>
+            </div>
+        </div> -->
+      </div>
+    </div>
+ 
+    <script src="lista-productos.js"></script>
+  </body>
