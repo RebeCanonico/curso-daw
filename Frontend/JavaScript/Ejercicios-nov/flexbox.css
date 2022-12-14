@@ -1,0 +1,26 @@
+.box {
+    width: 120px;
+    height: 120px;
+    background: #101010;
+    color: orange;
+    margin: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    border-radius: 5px;
+
+}
+.box:nth-child(2) {
+    width: 300px;
+}
+body {
+    /* flex direction */
+    display: flex;
+    /* flex-direction: column | row | row-reverse | column-reverse; */
+    /* flex-wrap: wrap | nowrap | wrap-reverse; */
+    /* flex-flow: column wrap; combina flex-direction y flex-wrap en una sola; */
+    /* justify-content: flex-start | flex-end | center | space-between | space-around |  space-evenly; */
+    /* align-items: stretch | flex-start | flex-end | center | baseline; */
+
+}
