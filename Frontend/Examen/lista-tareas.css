@@ -1,0 +1,158 @@
+html {
+    height: 100%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    height: 100%;
+    background: #8b5ceb;
+    background: linear-gradient(180deg, #8b5ceb 0%, #ADD8E6 100%);
+    font-size: 16px;
+    line-height: 1.5
+  }
+  
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: whitesmoke;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+
+  }
+  .container h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: darkslategrey;
+    text-align: center;
+}
+input {
+    
+}
+button {
+    position: relative;
+    cursor: pointer;
+    background-color: #8b5ceb;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 0 rgb(180, 180, 180);
+}
+button:active {
+    top: 5px;
+    box-shadow: 0 0px 0 0 rgb(180, 180, 180);
+}
+
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  
+  /* .search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+  }
+  
+  input {
+    padding: 15px 10px;
+    outline: none;
+    width: 400px;
+  } */
+  
+  /* .li-container {
+    background-color: white;
+    width: 100%;
+    color: darkslategray;
+    margin-top: 20px;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+  }
+  
+  li p {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+  } */
+  
+  .eliminar {
+    margin-left: auto;
+    border: none;
+    background-color: #e31746;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 10%;
+    font-size: 1.2em;
+  }
+  
+  .eliminar:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
+  }
+  
+  .btn-add {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    font-family: fantasy;
+    background-color: teal;
+    font-size: 1.4rem;
+    outline: none;
+  }
+  
+  .btn-add:hover {
+    cursor: pointer;
+    background-color: darkcyan;
+  }
+  
+  /* .empty {
+    color: darkslategrey;
+  } */
