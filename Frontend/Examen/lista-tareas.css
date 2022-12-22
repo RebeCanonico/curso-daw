@@ -1,9 +1,10 @@
 * {
     font-family: "Poppins", sans-serif;
 }
+
 body {
     background: linear-gradient(180deg, #8b5ceb 0%, #ADD8E6 100%);
-    background-attachment: fixed; /* evitar que se repita el gradiente */
+    background-attachment: fixed;
 }
 
 h1 {
@@ -12,8 +13,8 @@ h1 {
 }
 
 button {
-    border: none;
     position: relative;
+    border: none;
     background-color: #8b5ceb;
     color: white;
     font-weight: bold;
@@ -21,7 +22,6 @@ button {
     width: 80px;
     text-align: center;
     border-radius: 10px !important;
-    /* !important es para que tenga mas peso que otras clases como bootstrap que lo sobreescribirian y no nos pillaria este. */
     box-shadow: 0 5px 0 0 rgb(180, 180, 180);
 }
 
@@ -35,8 +35,6 @@ ul {
     padding: 0;
 }
 
-
-/* Style the list items */
 ul > li {
     cursor: pointer;
     list-style-type: none;
@@ -44,12 +42,11 @@ ul > li {
     padding: 0 0 0 40px;
 }
 
-/* Color de fondo al pasar el mouse */
 ul li:hover {
     background: #ddd;
     border-radius: 10px;
 }
-/* Al hacer clic, agrega un color de fondo y tacha el texto */
+/* Al hacer clic, tacha el texto y agrega un color de fondo  */
 ul li.checked {
     background: #888;
     color: #fff;
@@ -73,8 +70,6 @@ ul li.checked::before {
     margin-left: auto;
     border: none;
     background-color: #e31746;
-    color: white;
-    font-weight: bold;
     padding: 5px 10px;
     outline: none;
     border-top-right-radius: 10px;
@@ -83,9 +78,11 @@ ul li.checked::before {
     font-size: 1.2em;
     max-height: 3rem;
 }
+
 .eliminar:hover {
     background-color: lightseagreen;
 }
+
 .eliminar img{
     max-height: 2rem;
     display:block;

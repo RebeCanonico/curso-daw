@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombilla on/off JQuery</title>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+<style>
+    #light {
+        width: 100px;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    /* añadimos la imagen correspondiente a cada id */
+    .off {
+        background: url(../../RECURSOS/bombillaapagada.gif);
+    }
+    .on {
+        background: url(../../RECURSOS/bombillaencendida.gif);
+    }
+</style>
+<body>
+    <div id="light" class="off"></div>
+    <button id="switch">Apagar/Encender</button>
+    
+</body>
+
+<script>
+    // alternar clase al hacer click
+    $('#switch').click(function(){
+        $('#light').toggleClass('off');
+        $('#light').toggleClass('on');
+    })
+</script>
+</html>
