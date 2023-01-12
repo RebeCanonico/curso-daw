@@ -102,6 +102,13 @@ SELECT e.*
 FROM empleados e, departamentos d
 WHERE e.coddepto = d.coddepto AND LOWER(e.nomemp) LIKE 'm%' AND (e.salemp > 800000 OR e.comisione > 0)
 AND LOWER(d.nombredpto) = 'ventas';
+-- Este funciona mejor yo creo
+
+SELECT e.* FROM departamentos d
+	JOIN empleados e ON e.coddepto = d.coddepto
+    WHERE nomEmp LIKE 'M%'
+    AND (salEmp > 800000 OR comisionE > 0)
+    AND nombreDpto != 'ventas';
 
 -- 24. Obtener los nombres, salarios y comisiones de los empleados que reciben un salario situado entre la mitad de la comisión la propia comisión
 SELECT nomemp, salemp, comisione
@@ -148,6 +155,26 @@ WHERE d.codDepto = e.codDepto
 GROUP BY d.codDepto
 HAVING COUNT(*) >= 3;
 
--- numero de empleados por departamento
-SELECT codDepto, COUNT() AS 'Numero empleados'
-FROM empleados, coddepto;
+-- 33. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige. Solo los que tengan mas de dos empleados (2 incluido)
+SELECT j.nDIEmp, j.nomEmp, COUNT(*) 'Numero empleados'
+FROM empleados e, empleados j
+WHERE e.jefeID = j.nDIEmp
+GROUP BY j.nomEmp
+HAVING COUNT(*) >= 2
+ORDER BY COUNT(*) DESC;
+-- NO FUNCIONA
+
+SELECT jefeID j, (SELECT nomEmp FROM empleados WHERE nDIEmp = j), COUNT(*) 'Numero de empleados' FROM empleados
+GROUP BY jefeID
+HAVING COUNT(*) >= 2;
+
+
+-- 34. Hallar los departamentos que no tienen empleados
+SELECT d.codDeptp, d.nombreDpto
+FROM departamentos d, empleados e
+WHERE d.codDepto = e.codDepto
+GROUP BY d.codDepto
+HAVING COUNT(*) = 0;
+-- NO FUNCIONA
+
+-- 35. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma
