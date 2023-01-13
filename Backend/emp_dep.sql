@@ -156,25 +156,25 @@ GROUP BY d.codDepto
 HAVING COUNT(*) >= 3;
 
 -- 33. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige. Solo los que tengan mas de dos empleados (2 incluido)
-SELECT j.nDIEmp, j.nomEmp, COUNT(*) 'Numero empleados'
-FROM empleados e, empleados j
-WHERE e.jefeID = j.nDIEmp
-GROUP BY j.nomEmp
-HAVING COUNT(*) >= 2
-ORDER BY COUNT(*) DESC;
--- NO FUNCIONA
-
 SELECT jefeID j, (SELECT nomEmp FROM empleados WHERE nDIEmp = j), COUNT(*) 'Numero de empleados' FROM empleados
 GROUP BY jefeID
 HAVING COUNT(*) >= 2;
 
+SELECT jefeID, COUNT(*) 'Numero de empleados' FROM empleados
+	GROUP BY jefeID
+    HAVING COUNT(*) >= 2;
 
 -- 34. Hallar los departamentos que no tienen empleados
-SELECT d.codDeptp, d.nombreDpto
-FROM departamentos d, empleados e
+SELECT d.codDepto, d.nombreDpto, COUNT(*) AS 'Numero empleados'
+FROM empleados e, departamentos d
 WHERE d.codDepto = e.codDepto
 GROUP BY d.codDepto
 HAVING COUNT(*) = 0;
--- NO FUNCIONA
 
 -- 35. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma
+SELECT d.nombreDpto, SUM(e.salEmp)
+FROM departamentos d, empleados e
+WHERE d.codDepto = e.codDepto
+GROUP BY d.nombreDpto
+ORDER BY sum(e.salEmp) DESC
+LIMIT 1;
