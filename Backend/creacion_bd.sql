@@ -13,6 +13,7 @@ nombre VARCHAR(45),
 precio INT,
 fecha_alta DATE);
 
+-- Corregimos añadimos restricciones a la tabla:
 ALTER TABLE productos
     MODIFY COLUMN fecha_alta DATETIME DEFAULT CURRENT_TIMESTAMP,
     MODIFY COLUMN precio DECIMAL(6,2), 
