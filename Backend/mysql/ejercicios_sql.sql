@@ -79,7 +79,10 @@ CHECK (funcion IN ('camarero', 'seguridad', 'limpieza'));
 
 
 -- Ejercicio 2:
--- La siguiente base de datos está pensada para almacenar la información necesaria para 
--- gestionar la venta automática de entradas para diferentes espectáculos desde múltiples 
--- puntos de venta, como pueden ser oficinas bancarias, terminales tipo Servicaixa, o las 
--- mismas taquillas de teatros u otros recintos.
+-- 1. Establecer las claves primarias de cada una de las tablas y las restricciones de integridad referencial existentes entre las mismas.
+
+CREATE DATABASE venta_espectaculos
+    DEFAULT CHARACTER SET = 'utf8mb4';
+
+USE venta_espectaculos;
+
