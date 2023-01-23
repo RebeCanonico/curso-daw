@@ -1,0 +1,17 @@
+# Vamos a crear una web donde podamos crear un usuario (registrarse) para que, cuando entremos a la web
+con ese usuario, podamos acceder a cierto contenido que sólo está disponible para usuarios logeados.
+
+# Primer paso: Crear dos formularios, login y registro.
+
+# Segundo paso: Crear una página principal. Habrá un botón "Conectarse" que nos llevará al formulario de 
+login.
+
+# Tercer paso: Conectar las paginas. En login habrá un link para ir a registrarse si no tenemos un 
+usuario. 
+En registro se nos llevará a login después de crear un usuario correctamente. 
+
+# Cuarto paso: Cuando nos logeamos con exito, iremos a la página principal, pero esta vez habrá una sección.
+Un panel de usuario en el que podremos modificar nuestros datos o cerrar sesión.
+
+# Bonus: Crear un panel de administración, al que sólo se puede acceder siendo admin.
+Desde aquí podremos agregar usuarios, convertirlos en admin, borrarlos o simplemente consultar sus datos (tabla).
