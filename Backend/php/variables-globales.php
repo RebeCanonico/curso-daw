@@ -38,7 +38,7 @@
 
     <h2>$_SESSION</h2>
     <P>
-        Array global que se una para gusrdar información que vamos a utilizar en multiples paginas.
+        Array global que se una para guardar información que vamos a utilizar en multiples paginas.
         No guarda información en el navegador a diferencia de las cookies.
     </P>
     <p>

@@ -7,25 +7,29 @@
     <title>Formulario de registro</title>
 
     <style>
-    /* form {
+    form {
     padding: 20px 20px;
-    } */
+    } 
     </style>
+    
 </head>
 <body>
+
 <div>
     <h2>Registro de usuario</h2>
-    <form action="conexion.php" method="post">
-        <input type="text"
+
+    <form action="registro-usuario.php" method="post">
+        <input type="text" maxlength="45"
         placeholder="Usuario" name="user"
         required>
         <br>
-        <input type="password" 
+        <input type="password" maxlength="20"
         placeholder="Contraseña" name="password"
         required>
         <br>
         <input type="submit" value="Enviar">
     </form>
+
     <a href="form-login.php">Iniciar sesión</a>
 </div>
 </body>

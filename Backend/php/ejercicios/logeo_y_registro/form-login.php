@@ -9,20 +9,27 @@
     <style>
     form {
     padding: 20px 20px;
-
-}
+    }
     </style>
+
 </head>
 <body>
+
 <div>
     <h2>Login</h2>
-    <form action=""class="login">
-        <input name="user" type="text" placeholder="Usuario" required>
+
+    <form action="login-usuario.php" class="login" method="post">
+        <input type="text" maxlength="45" 
+        placeholder="Usuario" name="user" 
+        required>
         <br>
-        <input name="password" type="password" placeholder="Contraseña" required>
+        <input type="password" maxlength="20" 
+        placeholder="Contraseña" name="password" 
+        required>
         <br>
         <input  type="submit" value="Acceder">
     </form>
+
     <a href="form-registro.php">Registrate ahora</a>
 </div>
 </body>

@@ -1,5 +1,21 @@
+<?php
+session_start();
+
+
+
+if(isset($_POST['logout'])){
+    unset($_SESSION['logged']);
+    // unset destruye esta sesión en concreto
+    // session_destroy() destruye todas las sesiones
+
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +23,32 @@
     <title>Document</title>
 
     <style>
-        .btn{
-            padding: 15px 25px;
+        div{
+            padding: 20px 20px;
         }
     </style>
 </head>
+
 <body>
-    <!-- <button>Iniciar sesión</button> -->
-    <a class="btn" href="form-login.php">Iniciar sesión</a> 
+    <!-- panel de usuario -->
+    <div>
+        <?php
+        // este if pregunta si el usuario está logeado
+        if (isset($_SESSION['logged'])) {
+            // aquí va el panel/botón/contenido del usuario
+            echo '<button>Ir a mi cuenta</button>';
+            echo "<form action='pag-principal.php' method='post'>
+            <input type='submit' value='Cerrar sesión' name='logout'>
+            </form>";
+        } else {
+            // Si no está logeado, mostramos el botón de iniciar sesión
+            echo '<a href="form-login.php">
+                    <button>Iniciar sesión</button>
+                 </a>';
+        }
+        ?>
+    </div>
+    
 </body>
+
 </html>
