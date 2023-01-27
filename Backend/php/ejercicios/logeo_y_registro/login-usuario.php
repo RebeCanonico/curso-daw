@@ -14,10 +14,16 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+      
        echo '<p>Has iniciado sesión con éxito</p>';
        echo "<p>Bienvenido $user.";
 
        $_SESSION['logged'] = true; 
+       while ($row = $result->fetch_assoc()) {
+         // creamos un array $row con los resultados de la query del usuarion
+         $_SESSION['username'] = $row['nombre']; //Primary key
+         $_SESSION['usertype'] = $row['tipo_usuario'];
+       }
     //    redirigir 
        echo '<br> <a href="pag-principal.php">
                     <button>Volver a página principal</button>

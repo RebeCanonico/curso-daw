@@ -7,7 +7,7 @@ if(isset($_POST['logout'])){
     unset($_SESSION['logged']);
     // unset destruye esta sesión en concreto
     // session_destroy() destruye todas las sesiones
-
+session_destroy();
 }
 
 
@@ -32,11 +32,12 @@ if(isset($_POST['logout'])){
 <body>
     <!-- panel de usuario -->
     <div>
+        
         <?php
         // este if pregunta si el usuario está logeado
         if (isset($_SESSION['logged'])) {
             // aquí va el panel/botón/contenido del usuario
-            echo '<button>Ir a mi cuenta</button>';
+            echo '<a href="panel-user.php"><button>Ir a mi cuenta</button></a>';
             echo "<form action='pag-principal.php' method='post'>
             <input type='submit' value='Cerrar sesión' name='logout'>
             </form>";
