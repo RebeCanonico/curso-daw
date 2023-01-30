@@ -28,6 +28,8 @@
         required>
         <br>
         <input  type="submit" value="Acceder">
+        <!-- Este input esta oculto -->
+
     </form>
 
     <a href="form-registro.php">Registrate ahora</a>

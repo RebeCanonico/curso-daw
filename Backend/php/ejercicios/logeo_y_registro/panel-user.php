@@ -42,32 +42,32 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h1>Tabla de los usuarios de la BD</h1>
+    <form action="">
     <table>
-        <!-- <tr>
-            <th>id</th>
-            <th>usuario</th>
-            <th>email</th>
-        </tr> -->
-        <?php
+       
+       <?php
         if ($result->num_rows > 0) {
             echo "<tr>
-            <th>Nombre</th>
-            <th>Contraseña</th>
-            <th>Tipo de usuario</th>
+            <th>nombre</th>
+            <th>contraseña</th>
+            <th>tipo de usuario</th>
             </tr>";
-            // imprimir datos de cada fila
+            // imprimir los datos de cada fila
             while ($row = $result->fetch_assoc()) {
-                echo "<tr> <td>" . $row['nombre']. "</td>" . 
-                          "<td>" . $row['password'] . "</td>" . 
-                          "<td>" . $row['tipo_usuario'] . "</td> </tr>";
+                echo "<tr> <td>" . $row['nombre'] . "</td>" .
+                    "<td>" . $row['password'] . "</td>" .
+                    "<td>" . $row['tipo_usuario'] . "</td> </tr>";
             }
-        
         }
-        $conn->close();
-        ?>
-        
-    </table>
+       
+       
+       $conn->close();
+       ?>
+       <input type="text" name="nombre" value="">
+   </table>
 
+    </form>
+    
     
     
 

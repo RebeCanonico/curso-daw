@@ -1,21 +1,17 @@
 <?php
 include 'conexion.php';
+$id = $_SESSION['username'];
 $user = $_POST['user'];
 $password = $_POST['password'];
 
 // creamos la query para guardar los datos
-$sql = "INSERT INTO usuarios (nombre, password);
-VALUES ('$user', '$password')";
+$sql = "UPDATE usuarios SET nombre = '$user', password = '$password'
+WHERE nombre = '$id'";
 
-// Ejecutamos la query y comprobamos si ha sido exitosa. Mostrmos los botones login y página principal
+// Ejecutamos la query y comprobamos si ha sido exitosa.
 if ($conn->query($sql) === TRUE) {
     echo 'Datos guardados con éxito';
-    echo '<br> <a href="login-usuario.php">
-            <button>Login</button>
-        </a>
-        <br> <a href="pag-principal.php">
-            <button>Página principal</button>
-        </a>';
+    $_SESSION['username'] = $user;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
