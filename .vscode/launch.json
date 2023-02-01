@@ -5,11 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000/Backend/php/ejercicios/logeo_y_registro/",
+            "webRoot": "${workspaceRoot}/Backend/php/ejercicios/logeo_y_registro/"
+        },
+        {
             "name": "Attach to Chrome",
             "port": 9003,
             "request": "attach",
             "type": "chrome",
-            "webRoot": "${workspaceFolder}/Backend/php/ejercicios/logeo_y_registro/form-login.php"
+            "webRoot": "${workspaceFolder}"
         },
         {
             "name": "Listen for Xdebug",

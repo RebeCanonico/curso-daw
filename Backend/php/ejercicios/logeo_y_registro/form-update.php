@@ -3,7 +3,8 @@ session_start();
 include 'conexion.php';
 
 // Cargamos los datos del usuario
-$user = $_SESSION['username'];
+// $user = $_SESSION['username'];
+$user = $_POST['nombreSel'];
 $sql = "SELECT * FROM usuarios WHERE nombre = '$user'";
 $result = $conn->query($sql);
 ?>
@@ -23,10 +24,12 @@ $result = $conn->query($sql);
         $pass = $row['password'];
 
         echo "<form action='update-user.php' method='post'>
-        <input type='text' name='user' value='$nombre'>
-        <input type='text' name='password' value='$pass'>
-        <input type='submit' value='Actualizar datos'>
-        </form>";
+                <tr>
+                    <td><input type='text' name='user' value='$nombre'></td>
+                    <td><input type='text' name='password' value='$pass'></td>
+                    <td><input type='submit' value='Actualizar datos'></td>
+                </tr>
+             </form>";
     }
 
     ?>
