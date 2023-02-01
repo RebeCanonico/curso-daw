@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexion.php';
 $id = $_SESSION['username'];
 $user = $_POST['user'];
@@ -18,4 +19,3 @@ if ($conn->query($sql) === TRUE) {
 
 // Cerramos la conexión con la BD
 $conn->close();
-?>

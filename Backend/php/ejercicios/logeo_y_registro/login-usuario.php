@@ -20,8 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
 
        $_SESSION['logged'] = true; 
        while ($row = $result->fetch_assoc()) {
-         // creamos un array $row con los resultados de la query del usuarion
-         $_SESSION['username'] = $row['nombre']; //Primary key
+         // creamos un array $row con los resultados de la query del usuario
+         $_SESSION['id'] = $row['id'];//Primary key
+         $_SESSION['username'] = $row['nombre']; 
          $_SESSION['usertype'] = $row['tipo_usuario'];
        }
     //    redirigir 

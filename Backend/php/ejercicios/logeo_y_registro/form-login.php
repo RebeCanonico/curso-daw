@@ -29,7 +29,7 @@
         <br>
         <input  type="submit" value="Acceder">
         <!-- Este input esta oculto -->
-
+        <input type='hidden' name='olduser' value='$user'>
     </form>
 
     <a href="form-registro.php">Registrate ahora</a>

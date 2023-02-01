@@ -10,7 +10,7 @@ VALUES ('$user', '$password')";
 // Ejecutamos la query y comprobamos si ha sido exitosa. Mostrmos los botones login y página principal
 if ($conn->query($sql) === TRUE) {
     echo 'Datos guardados con éxito';
-    echo '<br> <a href="login-usuario.php">
+    echo '<br> <a href="form-login.php">
             <button>Login</button>
         </a>
         <br> <a href="pag-principal.php">
