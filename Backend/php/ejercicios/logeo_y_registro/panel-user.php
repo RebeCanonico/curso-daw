@@ -2,8 +2,11 @@
 session_start();
 include 'conexion.php';
 
-if (isset($_SESSION['logged']) && $_SESSION['usertype'] == 
-'admin') {
+// Aqui busca saber si es usuario admin o user 
+if (
+    isset($_SESSION['logged']) && $_SESSION['usertype'] ==
+    'admin'
+) {
     $sql = 'SELECT * FROM usuarios';
 } elseif ($_SESSION['usertype'] == 'user') {
     $user = $_SESSION['username'];
@@ -15,6 +18,7 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,27 +29,31 @@ $result = $conn->query($sql);
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         table {
             border: 2px solid black;
-            border-collapse: collapse; 
+            border-collapse: collapse;
         }
+
         th {
             background-color: #aabbcc;
             border: 2px solid black;
             padding: 2px 5px;
         }
+
         td {
             border: 1px solid black;
             padding: 2px 5px;
         }
     </style>
 </head>
+
 <body>
-    <h1>Tabla de los usuarios de la BD</h1>
-    
+    <h1>Tabla de usuarios</h1>
+
     <table>
-       
-       <?php
+
+        <?php
         if ($result->num_rows > 0) {
             echo "<tr>
             <th>nombre</th>
@@ -53,7 +61,8 @@ $result = $conn->query($sql);
             <th>tipo de usuario</th>
             <th>modificar</th>
             </tr>";
-            // imprimir los datos de cada fila
+            // imprimir los datos de cada fila. 
+            // (while) mientras encuentre una linea en la variable result ejecutara el codigo de dentro del bucle.
             while ($row = $result->fetch_assoc()) {
                 echo "<form action='form-update.php' method='post'>
                 <tr> <td>" . $row['nombre'] . "</td>" .
@@ -61,7 +70,7 @@ $result = $conn->query($sql);
                     "<td>" . $row['tipo_usuario'] . "</td> 
                     
                     <td>
-                    <input type='hidden' name='nombreSel' value='". $row["nombre"] ."'>
+                    <input type='hidden' name='nombreSel' value='" . $row["nombre"] . "'>
                     <button type='submit'>
                     <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                                          width='24' height='24'
@@ -73,21 +82,18 @@ $result = $conn->query($sql);
                     
                     </tr>
                     </form>";
-
-
             }
         }
-       
-       
-       $conn->close();
-       ?>
-       
-   </table>
-
+        $conn->close();
+        ?>
+        
+    </table>
     
-    
-    
-    
+    <br>
+    <a href="pag-principal.php">
+                    <button>Pagina principal</button>
+                 </a>
 
 </body>
+
 </html>

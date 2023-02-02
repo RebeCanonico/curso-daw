@@ -4,7 +4,7 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] = 'POST') {
     include 'conexion.php';
 
-    // Recibimos las variables del form
+    // Recibimos las variables del formulario
     $user = $_POST['user'];
     $password = $_POST['password'];
 
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-      
+
        echo '<p>Has iniciado sesión con éxito</p>';
        echo "<p>Bienvenido $user.";
 
