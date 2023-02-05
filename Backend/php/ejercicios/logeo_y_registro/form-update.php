@@ -24,12 +24,6 @@ $result = $conn->query($sql);
         $pass = $row['password'];
         $usertype = $row['tipo_usuario'];
 
-        // echo "<tr>
-        //     <th>nombre</th>
-        //     <th>contraseña</th>
-        //     <th>tipo de usuario</th>
-        //     <th>modificar</th>
-        //     </tr>";
         echo "<form action='update-user.php' method='post'>
                 <input type='hidden' name='userOld' value='$user'>
                 <tr>
@@ -49,7 +43,9 @@ $result = $conn->query($sql);
                     </td>";
                 }    
                 echo "<td><input type='submit' value='Actualizar datos'></td>
+                
                 </tr>
+
              </form>";
     }
 
