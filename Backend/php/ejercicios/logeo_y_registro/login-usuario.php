@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
          $_SESSION['usertype'] = $row['tipo_usuario'];
        }
     //    redirigir 
-       echo '<br> <a href="pag-principal.php">
-                    <button>Volver a página principal</button>
+       echo '<br> <a href="panel-user.php">
+                    <button>Ir a mi cuenta</button>
                  </a>';
     }
 

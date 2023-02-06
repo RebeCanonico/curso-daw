@@ -5,17 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario login</title>
-
-    <style>
-    form {
-    padding: 20px 20px;
-    }
-    </style>
+    
+    <link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
 
-<div>
+<div class="container">
     <h2>Login</h2>
 
     <form action="login-usuario.php" class="login" method="post">
@@ -27,9 +23,7 @@
         placeholder="Contraseña" name="password" 
         required>
         <br>
-        <input  type="submit" value="Acceder">
-        <!-- Este input esta oculto -->
-        <input type='hidden' name='olduser' value='$user'>
+        <input id="submit" type="submit" value="Acceder">
     </form>
 
     <a href="form-registro.php">Registrate ahora</a>

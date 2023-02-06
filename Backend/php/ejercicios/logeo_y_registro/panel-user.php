@@ -71,7 +71,7 @@ $result = $conn->query($sql);
                     "<td>" . $row['password'] . "</td>" .
                     "<td>" . $row['tipo_usuario'] . "</td> 
                     <td>
-                    <input type='hidden' name='nombreSel' value='" . $row["nombre"] . "'>
+                    <input type='hidden' name='idSel' value='" . $row["id"] . "'>
                     <button type='submit'>
                     <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                         width='24' height='24'
@@ -86,7 +86,7 @@ $result = $conn->query($sql);
                         echo "<form action='form-delete.php' method='post'>
                         
                             <td>
-                            <input type='hidden' name='nombreDel' value='" . $row["nombre"] . "'>
+                            <input type='hidden' name='idDel' value='" . $row["id"] . "'>
                             <button type='submit'>
                             <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve' width='24' height='24'>
                             <g>
@@ -109,8 +109,11 @@ $result = $conn->query($sql);
     </table>
     <br>
     <?php
+    
     if (isset($_SESSION['logged']) && $_SESSION['usertype'] =='admin') {
-    echo "<form action='insert-user.php' method='post'>
+    echo "  <h3>Nuevo usuario</h3>
+            <br>
+            <form action='insert-user.php' method='post'>
             <label for='user'>Nombre</label>
             <input type='text' name='user'></td>
             <td>

@@ -4,8 +4,8 @@ include 'conexion.php';
 
 // Cargamos los datos del usuario
 // $user = $_SESSION['username'];
-$user = $_POST['nombreSel'];
-$sql = "SELECT * FROM usuarios WHERE nombre = '$user'";
+$user = $_POST['idSel'];
+$sql = "SELECT * FROM usuarios WHERE id = '$user'";
 $result = $conn->query($sql);
 ?>
 
@@ -25,7 +25,7 @@ $result = $conn->query($sql);
         $usertype = $row['tipo_usuario'];
 
         echo "<form action='update-user.php' method='post'>
-                <input type='hidden' name='userOld' value='$user'>
+                <input type='hidden' name='userId' value='$user'>
                 <tr>
                     <td>
                     <label for='user'>Nombre</label>

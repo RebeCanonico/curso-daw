@@ -3,8 +3,8 @@ session_start();
 include 'conexion.php';
 
 // Cargamos los datos del usuario
-$user = $_POST['nombreDel'];
-$sql = "DELETE FROM usuarios WHERE nombre = '$user'";
+$user = $_POST['idDel'];
+$sql = "DELETE FROM usuarios WHERE id = '$user'";
 if($conn->query($sql)) {
     echo '<p>Contacto borrado con éxito</p>';
   } else {

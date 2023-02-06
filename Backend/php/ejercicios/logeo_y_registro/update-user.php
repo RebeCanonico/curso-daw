@@ -1,19 +1,19 @@
 <?php
 session_start();
 include 'conexion.php';
-$userOld = $_POST['userOld']; // nombre antiguo del user    
+$userId = $_POST['userId']; // id del user    
 $user = $_POST['user']; // nombre nuevo del user 
 $password = $_POST['password']; // password nueva del user
 if(isset($_POST['tipo_usuario'])){
     $usertype = $_POST['tipo_usuario'] ; //REVISAR
     // creamos la query para actualizar los datos
     $sql = "UPDATE usuarios SET nombre = '$user', password = '$password', tipo_usuario = '$usertype'
-    WHERE nombre = '$userOld'";
+    WHERE id = '$userId'";
 }else{
     // si soy user solo modifico nombre y password
     // creamos la query para actualizar los datos
     $sql = "UPDATE usuarios SET nombre = '$user', password = '$password'
-    WHERE nombre = '$userOld'";
+    WHERE id = '$userId'";
 }
 
 

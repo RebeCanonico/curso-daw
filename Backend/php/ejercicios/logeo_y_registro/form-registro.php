@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de registro</title>
 
-    <style>
-    form {
-    padding: 20px 20px;
-    } 
-    </style>
+    <link rel="stylesheet" href="styles.css" />
     
 </head>
 <body>
 
-<div>
+<div class="container">
     <h2>Registro de usuario</h2>
 
     <form action="registro-usuario.php" method="post">
@@ -27,7 +23,7 @@
         placeholder="Contraseña" name="password"
         required>
         <br>
-        <input type="submit" value="Enviar">
+        <input id="submit" type="submit" value="Enviar">
     </form>
 
     <a href="form-login.php">Iniciar sesión</a>
