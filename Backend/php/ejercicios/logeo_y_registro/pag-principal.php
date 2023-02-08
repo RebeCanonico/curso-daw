@@ -22,34 +22,29 @@ session_destroy();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-        div{
-            padding: 20px 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <!-- panel de usuario -->
-    <div>
+    <div class="container">
         
         <?php
         // este if pregunta si el usuario está logeado
         if (isset($_SESSION['logged'])) {
             // aquí va el panel/botón/contenido del usuario
-            echo '<a href="panel-user.php"><button>Ir a mi cuenta</button></a>';
-            echo "<form action='pag-principal.php' method='post'>
-            <input type='submit' value='Cerrar sesión' name='logout'>
-            </form>";
+            echo "<div><a href='panel-user.php'><button class='btn'>Ir a mi cuenta</button></a></div>";
+            echo "<div><form action='pag-principal.php' method='post'>
+            <input class='btn' type='submit' value='Cerrar sesión' name='logout'>
+            </form></div>";
         } else {
             // Si no está logeado, mostramos el botón de iniciar sesión
-            echo '<a href="form-login.php">
-                    <button>Iniciar sesión</button>
-                 </a>';
+            echo "<div><a href='form-login.php'>
+            <button class='btn'>Iniciar sesión</button>
+            </a></div>";
         }
         ?>
     </div>
     
 </body>
-
 </html>

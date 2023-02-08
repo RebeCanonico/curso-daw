@@ -17,7 +17,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar datos</title>
 </head>
-<body>
+<body class="bgc">
     <?php
     while ($row = $result->fetch_assoc()) {
         $nombre = $row['nombre'];

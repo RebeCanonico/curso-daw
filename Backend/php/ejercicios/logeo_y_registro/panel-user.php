@@ -22,7 +22,10 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla con base de datos</title>
 
+    <link rel="stylesheet" href="styles.css" />
+
     <style>
+        
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -33,7 +36,8 @@ $result = $conn->query($sql);
         }
 
         th {
-            background-color: #aabbcc;
+            background-color: #180148;
+            color: #f8f8f8;
             border: 2px solid black;
             padding: 2px 5px;
         }
@@ -46,6 +50,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
+    <div class="container">
     <h1>Tabla de usuarios</h1>
 
     <table>
@@ -125,16 +130,16 @@ $result = $conn->query($sql);
                 <option value='admin'>Admin</option>
                 <option selected value='user'>User</option>
             </select>
-            <button type='submit'>NUEVO USUARIO</button>
+            <button class='btn' type='submit'>Nuevo usuario</button>
         </form>";
 
     }
     ?>
     <br>
     <a href="pag-principal.php">
-                    <button>Pagina principal</button>
+                    <button class="btn">Pagina principal</button>
                  </a>
-
+</div>
 </body>
 
 </html>
