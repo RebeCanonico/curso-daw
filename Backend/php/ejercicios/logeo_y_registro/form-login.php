@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario login</title>
+    <title>Iniciar Sesión</title>
     
     <link rel="stylesheet" href="styles.css" />
+
 <style>
-    * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 </style>
+
 </head>
 <body class="bgc">
 
 <div class="container-form">
-    <h2>Login</h2>
+
+    <h2>Iniciar sesión</h2>
 
     <form action="login-usuario.php" class="login" method="post">
         <input class="inp" type="text" maxlength="45" 
@@ -33,7 +35,7 @@
         <input class="submit" type="submit" value="Acceder">
     </form>
 
-    <a href="form-registro.php">Registrate ahora</a>
+    <a class="decoration" href="form-registro.php">Registrate ahora</a>
 </div>
 </body>
 </html>

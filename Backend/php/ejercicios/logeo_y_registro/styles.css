@@ -16,7 +16,7 @@ body.bgc {
 
 h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 30px;
     color: rgb(6, 74, 127);
 }
@@ -25,7 +25,7 @@ input.inp {
     width: 100%;
     background-color: transparent;
     margin-bottom: 2em;
-    font-size: 20px;
+    font-size: 19px;
     padding: 1em 0 0.5em 0.5em;
     border: none;
     border-bottom: 2px solid #202020;
@@ -36,20 +36,25 @@ input.inp {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    font-size: 1.1em;
+    font-size: 0.9em;
     width: 7em;
     background-color: #096292;
     color: white;
     padding: 0.8em 0;
     margin-top: 2em;
     border-radius: 0.3em;
+    border-color: #096292;
+    border-style: solid;
+    cursor: pointer;
   }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .btn {
     font-size: 0.9em;
     width: 10em;
@@ -69,13 +74,51 @@ input.inp {
     border-radius: 150px;
     border: 2px solid #096292;
     color: black;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
 }
+
 .slct:focus {
-outline: none;
+    outline: none;
 }
+
 .inpPanel {
-    border: none;
+border: none;
 border-bottom: 2px solid #096292;
+}
+
+.decoration {
+    text-decoration: none
+}
+
+a.decoration:hover {
+    text-decoration-line: underline;
+    color: #180148;
+}
+
+svg {
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border: 2px solid #096292;
+    border-collapse: collapse;   
+}
+
+th {
+    text-align: center;
+    background-color: #096292;
+    color: #f8f8f8;
+    border: 2px solid #096292;
+    padding: 2px 5px;
+}
+
+td {
+    text-align: center;
+    border: 1px solid #096292;
+    padding: 2px 5px;
 }

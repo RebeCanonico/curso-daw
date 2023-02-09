@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
 <?php
 session_start();
 include 'conexion.php';
@@ -20,7 +21,7 @@ $sql = "DELETE FROM usuarios WHERE id = '$user'";
 echo "<div class='container'>";
 
 if($conn->query($sql)) {
-    echo '<div><p>Contacto borrado con éxito</p></div>';
+    echo '<div><p>Usuario borrado con éxito.</p></div>';
   } else {
     echo '<div><p>Hubo un error al borrar el contaco: ' . $conn->error . '</p></div>';
   }
@@ -28,11 +29,6 @@ if($conn->query($sql)) {
 <br>
     <div><a href="panel-user.php">
         <button class="btn">Panel de usuario</button>
-    </a></div>
-    
-<br>
-    <div><a href="pag-principal.php">
-        <button class="btn">Pagina principal</button>
     </a></div>
 
 </div>

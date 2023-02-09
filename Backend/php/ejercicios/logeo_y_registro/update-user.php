@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Usuario actualizado</title>
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,16 +29,12 @@ if(isset($_POST['tipo_usuario'])){
     WHERE id = '$userId'";
 }
 
-
 // Ejecutamos la query y comprobamos si ha sido exitosa.
 if ($conn->query($sql) === TRUE) {
     echo "<div class='container'>
-    <div><p>Datos guardados con éxito</p></div>";
+    <div><p>Datos guardados con éxito.</p></div>";
     echo "<br> <div><a href='panel-user.php'>
-            <button class='btn'>Tabla usuarios</button>
-        </a></div>
-        <br> <div><a href='pag-principal.php'>
-            <button class='btn'>Página principal</button>
+            <button class='btn'>Panel de usuario</button>
         </a></div>
         </div>";
     if(!isset($_POST['tipo_usuario'])){
@@ -50,5 +47,6 @@ if ($conn->query($sql) === TRUE) {
 // Cerramos la conexión con la BD
 $conn->close();
 ?>
+
 </body>
 </html>

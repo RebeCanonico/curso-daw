@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de registro</title>
+    <title>Bienvenido</title>
 
     <link rel="stylesheet" href="styles.css" />
    
@@ -20,12 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
     $user = $_POST['user'];
     $password = $_POST['password'];
 
-
     // Hacemos la query para buscar si existe un usuario con estos datos
     $sql = "SELECT * FROM usuarios WHERE nombre = '$user' AND password = '$password'";
     $result = $conn->query($sql);
 
-    
 if ($result->num_rows > 0) {
 
 echo "<div class='container'>
@@ -41,13 +39,18 @@ while ($row = $result->fetch_assoc()) {
 }
 //    redirigir 
 echo "<br> <div><a href='panel-user.php'>
-             <button class='btn'>Ir a mi cuenta</button>
+             <button class='btn'>Panel de usuario</button>
           </a></div>
    </div>";
+} else {
+  echo "<div class='container'><div><p>Contraseña incorrecta.</p></div>";
+  echo "<div><a href='form-login.php'>
+            <button class='btn'>Iniciar sesión</button>
+            </a></div>
+            </div>";
 }
 
-
-    $conn->close();
+$conn->close();
 }
 ?>
 
