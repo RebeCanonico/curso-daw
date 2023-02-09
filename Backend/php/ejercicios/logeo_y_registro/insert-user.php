@@ -28,7 +28,7 @@ if ($conn->query($sql) === TRUE) {
     echo "<br> <div><a href='panel-user.php'>
             <button class='btn'>Tabla usuarios</button>
         </a></div>
-        <br> <div><a href='pag-principal.php'>
+         <div><a href='pag-principal.php'>
             <button class='btn'>Página principal</button>
         </a></div>
         </div>";

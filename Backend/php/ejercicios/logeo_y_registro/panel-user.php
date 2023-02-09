@@ -31,19 +31,21 @@ $result = $conn->query($sql);
         }
 
         table {
-            border: 2px solid black;
+            border: 2px solid #096292;
             border-collapse: collapse;
         }
 
         th {
-            background-color: #180148;
+            text-align: center;
+            background-color: #096292;
             color: #f8f8f8;
-            border: 2px solid black;
+            border: 2px solid #096292;
             padding: 2px 5px;
         }
 
         td {
-            border: 1px solid black;
+            text-align: center;
+            border: 1px solid #096292;
             padding: 2px 5px;
         }
     </style>
@@ -52,7 +54,7 @@ $result = $conn->query($sql);
 <body>
     <div class="container">
     <h1>Tabla de usuarios</h1>
-
+    <div>
     <table>
 
         <?php
@@ -112,33 +114,35 @@ $result = $conn->query($sql);
         ?>
         
     </table>
+    </div>
     <br>
     <?php
     
     if (isset($_SESSION['logged']) && $_SESSION['usertype'] =='admin') {
-    echo "  <h3>Nuevo usuario</h3>
-            <br>
+    echo "  <br>
+            <h3>Nuevo usuario</h3>
+            <div>
             <form action='insert-user.php' method='post'>
             <label for='user'>Nombre</label>
-            <input type='text' name='user'></td>
+            <input class='inpPanel' type='text' maxlength='45' name='user' required></td>
             <td>
             <label for='password'>Contraseña</label>
-            <input type='text' name='password'></td>
+            <input class='inpPanel' type='text' maxlength='20' name='password' required></td>
             
             <label for='tipo_usuario'>Tipo de usuario</label>
-            <select name='tipo_usuario' >
+            <select class='slct' name='tipo_usuario' >
                 <option value='admin'>Admin</option>
                 <option selected value='user'>User</option>
             </select>
             <button class='btn' type='submit'>Nuevo usuario</button>
-        </form>";
+        </form></div>";
 
     }
     ?>
     <br>
-    <a href="pag-principal.php">
+    <div><a href="pag-principal.php">
                     <button class="btn">Pagina principal</button>
-                 </a>
+                 </a></div>
 </div>
 </body>
 

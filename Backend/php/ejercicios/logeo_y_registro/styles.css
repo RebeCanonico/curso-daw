@@ -1,4 +1,3 @@
-
 body.bgc {
     background-color: #180148;
 }
@@ -45,7 +44,7 @@ input.inp {
     margin-top: 2em;
     border-radius: 0.3em;
   }
-  .container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,4 +59,23 @@ input.inp {
     margin: 2em;
     border: none;
     border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.slct {
+    padding: 5px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    border-radius: 150px;
+    border: 2px solid #096292;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+.slct:focus {
+outline: none;
+}
+.inpPanel {
+    border: none;
+border-bottom: 2px solid #096292;
 }

@@ -16,8 +16,11 @@ $result = $conn->query($sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar datos</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bgc">
+<body>
+
+    <div class="container">
     <?php
     while ($row = $result->fetch_assoc()) {
         $nombre = $row['nombre'];
@@ -29,27 +32,28 @@ $result = $conn->query($sql);
                 <tr>
                     <td>
                     <label for='user'>Nombre</label>
-                    <input type='text' name='user' value='$nombre'></td>
+                    <input class='inpPanel' type='text' maxlength='45' required name='user' value='$nombre'></td>
                     <td>
                     <label for='password'>Contraseña</label>
-                    <input type='text' name='password' value='$pass'></td>";
+                    <input class='inpPanel' type='text' maxlength='20' required name='password' value='$pass'></td>";
                 if ($_SESSION['usertype'] == 'admin') {
                     echo "<td>
                     <label for='tipo_usuario'>Tipo de usuario</label>
-                        <select name='tipo_usuario' >
+                        <select class='slct' name='tipo_usuario' >
                             <option value='admin'>Admin</option>
                             <option selected value='user'>User</option>
                         </select>
                     </td>";
                 }    
-                echo "<td><input type='submit' value='Actualizar datos'></td>
+                echo "<td><input class='btn' type='submit' value='Actualizar datos'></td>
                 
                 </tr>
 
              </form>";
     }
-
     ?>
+    </div>
+
 <label for=""></label>
 
 </body>
