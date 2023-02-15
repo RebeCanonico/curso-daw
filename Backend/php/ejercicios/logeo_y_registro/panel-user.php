@@ -21,12 +21,19 @@ $result = $conn->query($sql);
     <title>Panel de usuario</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="change-color.js"></script>
 
 </head>
 <body>
     <div class="container">
 
         <h1>Usuarios</h1>
+
+    <div class="search-box"  >
+        <input class="inpPanel" type="text" autocomplete="off" placeholder="Buscar usuario...">
+        <div class="display"></div><br>
+    </div>
 
     <div>
         <table>
