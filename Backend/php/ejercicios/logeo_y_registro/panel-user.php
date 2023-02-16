@@ -29,15 +29,18 @@ $result = $conn->query($sql);
     <div class="container">
 
         <h1>Usuarios</h1>
-
-    <div class="search-box"  >
-        <input class="inpPanel" type="text" autocomplete="off" placeholder="Buscar usuario...">
-        <div class="display"></div><br>
-    </div>
+        
+        <?php
+        if (isset($_SESSION['logged']) && $_SESSION['usertype'] =='admin') {
+        echo " <div class='search-box'>
+                <input class='inpPanel' type='text' autocomplete='off' placeholder='Buscar usuario...'>
+                <div class='display'></div><br>
+            </div>";
+        }
+        ?>
 
     <div>
         <table>
-
             <?php
             if ($result->num_rows > 0) {
                 echo "<tr>
@@ -89,12 +92,11 @@ $result = $conn->query($sql);
             }
             $conn->close();
             ?>
-            
         </table>
     </div>
     <br>
+
     <?php
-    
     if (isset($_SESSION['logged']) && $_SESSION['usertype'] =='admin') {
     echo "  <br>
             <h3>Nuevo usuario</h3>
