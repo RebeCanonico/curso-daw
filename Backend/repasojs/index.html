@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Repaso de JavaScript</title>
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Formulario de registro</h1>
-        <form action="">
-            <div>
-                <input class="pass" type="text" name="user" required>
-                <label for="">Usuario</label>
-            </div>
 
-            <div>
-                <input class="pass" type="text" name="pass" required>
-                <label for="">Contraseña</label>
-            </div>
-
-            <div>
-                <input class="pass" type="text" name="confirm" required>
-                <label for="">Confirme contraseña</label>
-            </div>
-
-            <div>
-                <input type="submit" value="Registrarse" disabled>
-            </div>
-        </form>
+<body id="body" class="cuerpo">
+    <div id="background"></div>
+    <div class="divBtn">
+        <button id="btnShow">Mostrar/Ocultar</button>
+        <button id="btnFade">Desvanecer</button>
+        <button id="btnSlide">Deslizar</button>
     </div>
-    
+
+    <div class="big-container">
+        <div class="container signup">
+            <h1>Registro de nuevo usuario</h1>
+            <form action="">
+                <div>
+                    <input type="text" name="user" required>
+                    <label for="">Usuario</label>
+                </div>
+
+                <div>
+                    <input class="pass" type="text" name="pass" required>
+                    <label for="">Contraseña</label>
+                </div>
+
+                <div>
+                    <input class="pass" type="text" name="confirm" required>
+                    <label for="">Confirme contraseña</label>
+                </div>
+
+                <div>
+                    <input type="submit" value="Registrarse" disabled>
+                </div>
+            </form>
+            <button class="cambiar cambioForm">Botón 1</button>
+        </div>
+        <div class="container login">
+            <h1>Inicio de sesión</h1>
+            <form action="">
+                <div>
+                    <input type="text" name="user" required>
+                    <label for="">Usuario</label>
+                </div>
+
+                <div>
+                    <input class="pass" type="text" name="pass" required>
+                    <label for="">Contraseña</label>
+                </div>
+
+
+                <div>
+                    <input type="submit" value="Login">
+                </div>
+
+
+            </form>
+            <button class="cambiar cambioForm">Botón 1</button>
+        </div>
+    </div>
+
+    <div class="divBtn">
+
+        <button id="btnClass" class="cambiar">Cambiar color</button>
+        <button id="btnBG" class="cambiar">Cambiar fondo</button>
+    </div>
+
 </body>
+
 </html>

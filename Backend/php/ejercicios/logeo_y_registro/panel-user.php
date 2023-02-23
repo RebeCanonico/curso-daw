@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 
     <link rel="stylesheet" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="change-color.js"></script>
+    <script src="script.js"></script>
 
 </head>
 <body>
@@ -32,10 +32,24 @@ $result = $conn->query($sql);
         
         <?php
         if (isset($_SESSION['logged']) && $_SESSION['usertype'] =='admin') {
-        echo " <div class='search-box'>
-                <input class='inpPanel' type='text' autocomplete='off' placeholder='Buscar usuario...'>
-                <div class='display'></div><br>
-            </div>";
+            echo " <div class='container'>
+            <form action=''>
+                <div class='search-box'>
+                    <input class='inpPanel' type='text' name='users' onkeyup='showUser(this.value, \"tabla-getuser.php\")' placeholder='Buscar usuario o correo...'>
+                    <select onchange='showUser(this.value, \"tabla-filteradmin.php\")'>
+                        <option value='' disabled selected>Filtrar por permisos</option>
+                        <option value='admin'>Mostrar administradores</option>
+                        <option value='user'>Mostrar usuarios</option>
+                    </select>
+                </div>
+            </form>
+            <div id='display'></div>
+        </div>
+            ";
+            // echo " <div class='search-box'>
+            //         <input class='inpPanel' type='text' autocomplete='off' onkeyup='showUser(this.value)' placeholder='Buscar usuario...'>
+            //         <div class='display'></div><br>
+            //     </div>";
         }
         ?>
 
@@ -45,8 +59,8 @@ $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 echo "<tr>
                 <th>Nombre</th>
-                <th>Contraseña</th>
                 <th>Tipo de usuario</th>
+                <th>Contraseña</th>
                 <th>Modificar</th>";
                 if (isset($_SESSION['logged']) && $_SESSION['usertype'] =='admin') {
                     echo "<th>Eliminar</th>";
@@ -58,8 +72,8 @@ $result = $conn->query($sql);
                 while ($row = $result->fetch_assoc()) {
                     echo "<form action='form-update.php' method='post'>
                     <tr> <td>" . $row['nombre'] . "</td>" .
-                        "<td>" . $row['password'] . "</td>" .
-                        "<td>" . $row['tipo_usuario'] . "</td> 
+                        "<td>" . $row['tipo_usuario'] . "</td>" .
+                        "<td>" . $row['password'] . "</td> 
                         <td>
                         <input type='hidden' name='idSel' value='" . $row["id"] . "'>
                         <button type='submit'>
@@ -124,4 +138,23 @@ $result = $conn->query($sql);
 
 </div>
 </body>
+<script>
+    function showUser(text, php) {
+        let display = document.getElementById('display');
+        // Si el input está vacío, el div tb se vacía
+        if (text == '') {
+            display.innerHTML = '';
+            return;
+        } else {
+            let ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    display.innerHTML = this.responseText;
+                }
+            };
+            ajax.open('GET', php + '?q=' + text, true);
+            ajax.send();
+        }
+    }
+</script>
 </html>

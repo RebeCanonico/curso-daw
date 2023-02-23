@@ -1,31 +1,70 @@
-body {
+#body {
     background-image: linear-gradient(to bottom right, #aabbcc, #1269c0);
-
+    transition: all 1s;
     /* viewport height/width (se ajusta al tamaño de la ventana/dispositivo) */
     height: 100vh;
     width: 100vw;
     margin: 0;
+    padding: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-div.container {
+div#background {
+    background-image: linear-gradient(to bottom right, #100203, #e51613);;
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+div.divBtn {
+    display: flex;
+    justify-content: space-between;
+
+    width: 285px;
+    margin: 20px;
+}
+
+.divBtn button {
+    background-color: #072d535e;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: all .5s;
+    padding: 5px;
+}
+.divBtn button:hover {
+    box-shadow: inset 0 0 2px 2px white;
+    cursor: pointer;
+}
+
+div.big-container {
     background-color: #072d535e;
     height: 300px;
     width: 250px;
     border-radius: 15px;
     color: white;
+    padding: 0 35px;
+    padding-bottom: 15px;
+}
 
+div.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
 
-    padding: 0 35px;
-    padding-bottom: 15px;
+.container.signup {
+    display: none;
 }
 
 h1 {
@@ -90,3 +129,10 @@ input[type='submit']:not(:disabled) {
 input[type='submit']:not(:disabled):hover {
     box-shadow: 0px 0px 10px 2px #ffff;
 } 
+
+
+
+.cuerpo {
+    background-image: linear-gradient(to bottom right, #e3e9ef, #07427d);
+    transition: all 1s;
+}
