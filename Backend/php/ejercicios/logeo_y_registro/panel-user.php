@@ -35,8 +35,8 @@ $result = $conn->query($sql);
             echo " <div class='container'>
             <form action=''>
                 <div class='search-box'>
-                    <input class='inpPanel' type='text' name='users' onkeyup='showUser(this.value, \"tabla-getuser.php\")' placeholder='Buscar usuario o correo...'>
-                    <select onchange='showUser(this.value, \"tabla-filteradmin.php\")'>
+                    <input class='inpPanel' type='text' name='users' onkeyup='showUser(this.value, \"nombre\")' placeholder='Buscar usuario o correo...'>
+                    <select onchange='showUser(this.value, \"tipo_usuario\")'>
                         <option value='' disabled selected>Filtrar por permisos</option>
                         <option value='admin'>Mostrar administradores</option>
                         <option value='user'>Mostrar usuarios</option>
@@ -139,22 +139,28 @@ $result = $conn->query($sql);
 </div>
 </body>
 <script>
-    function showUser(text, php) {
+    function showUser(text, filtro) {
         let display = document.getElementById('display');
+
+
         // Si el input está vacío, el div tb se vacía
-        if (text == '') {
-            display.innerHTML = '';
-            return;
-        } else {
-            let ajax = new XMLHttpRequest();
+        if (text == '' || !text) {
+            text = 'all';
+        }
+
+        let ajax = new XMLHttpRequest();
             ajax.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+
                     display.innerHTML = this.responseText;
                 }
             };
-            ajax.open('GET', php + '?q=' + text, true);
+            ajax.open('GET', 'tabla-get.php?value=' + text 
+            + '&filtro=' + filtro, true);
             ajax.send();
-        }
     }
+
+    // Si llamamos a la funcion. La tabla se muestra al cargar la página
+    showUser("");
 </script>
 </html>
