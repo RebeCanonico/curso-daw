@@ -1,0 +1,268 @@
+/* BASE */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* FORMULARIO LOGIN */
+.formulario{
+    background-image: linear-gradient(to bottom right,  #aabbcc, #1269c0);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.formulario .contenido-formulario{
+    padding: 25px;
+    background-color: #fff;
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.formulario .contenido-formulario h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-family: 'Righteous';
+    color: rgb(6, 74, 127);
+}
+.formulario .contenido-formulario input {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 2em;
+    font-size: 19px;
+    padding: 1em 0 0.5em 0.5em;
+    border: none;
+    border-bottom: 2px solid #202020;
+}
+.formulario .contenido-formulario button {
+    background-color: #096292;
+    color: white;
+    padding: 10px 22px;
+    margin-top: 15px;
+    border-radius: 0.3em;
+    border-color: #096292;
+    border-style: solid;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+.formulario .contenido-formulario button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #aabbcc;
+    z-index: -1;
+    transition: 1s;
+}
+.formulario .contenido-formulario button:hover .overlay{
+    width: 100%;
+}
+
+/* MENU */
+.contenedor-header{
+    background-color: #202020;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.90;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #096292;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li button{
+    background-color: #096292;
+    border-radius: 0.3em;
+    border-color: #096292;
+    border-style: solid;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+}
+.contenedor-header header nav ul li button:hover{
+    color: #202020;
+}
+.nav-responsive{
+    background-color: #096292;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* TABLAS */
+.tabla{
+    background-image: linear-gradient(to bottom right,  #aabbcc, #1269c0);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tabla .contenido-tabla input{
+    border: none;
+}
+.tabla .contenido-tabla table{
+    width: auto;
+    border: 2px solid #096292;
+    border-collapse: collapse; 
+    margin-top: 10%;
+}
+.tabla .contenido-tabla th{
+    text-align: center;
+    background-color: #096292;
+    color: #f8f8f8;
+    border: 2px solid #096292;
+    padding: 2px 5px;
+}
+.tabla .contenido-tabla td{
+    text-align: center;
+    border: 1px solid #096292;
+    padding: 2px 5px;
+}
+.tabla .contenido-tabla  tr{
+    background-color: whitesmoke;
+}
+.tabla .contenido-tabla i {
+cursor: pointer;
+}
+/* nuevo colaborador */
+.tabla .contenido-newcolab {
+    position: fixed;
+    bottom: 7%;
+}
+.tabla .contenido-newcolab input {
+    border: none;
+    border-bottom: 2px solid #096292;
+}
+.tabla .contenido-newcolab button {
+    font-size: 0.9em;
+    width: 10em;
+    background-color: #096292;
+    color: white;
+    padding: 0.5em 0;
+    margin: 2em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+/*  */
+.bienvenido {
+        background-image: linear-gradient(to bottom right,  #aabbcc, #1269c0);
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
+.bienvenido p {
+    color: #fff;
+}
+.bienvenido button {
+    background-color: #096292;
+    color: white;
+    padding: 10px 22px;
+    margin-top: 15px;
+    border-radius: 0.3em;
+    border-color: #096292;
+    border-style: solid;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+.bienvenido button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #aabbcc;
+    z-index: -1;
+    transition: 1s;
+}
+.bienvenido button:hover .overlay{
+    width: 100%;
+}
+
+/* RESPONSIVE */
+/* menu */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+    
+}
+.contenido-newcolab form{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+@media screen and (max-width:700px){
+    .contenido-newcolab form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* VALIDACIÓN */
+.verde{
+    background-color: #bdecb6;
+}
+.rojo{
+    background-color: #ff6961;
+}
+.amarillo{
+    background-color: #fdfd96;
+}
+
