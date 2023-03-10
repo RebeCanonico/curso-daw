@@ -16,12 +16,10 @@ session_start();
 include 'conexion.php';
 $idSel = $_POST['idSel'];   
 if(isset($_POST['idSel'])){
-    // creamos la query para actualizar los datos
     $sql = "UPDATE seguridad SET verificado = '1'
     WHERE id = '$idSel'";
 }
 
-// Ejecutamos la query y comprobamos si ha sido exitosa.
 if ($conn->query($sql) === TRUE) {
     echo "<div class='bienvenido'>
     <div><p>Datos verificados con éxito.</p></div>";
