@@ -157,7 +157,7 @@ $result = $conn->query($sql);
                                 </div>
                         </form>
                     </div>";
-                    }
+                    } 
                     ?>
         </div> 
 </body>

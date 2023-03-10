@@ -85,6 +85,10 @@ html{
     align-items: center;
     padding: 15px 20px;
 }
+.contenedor-header form {
+    display: flex;
+    justify-content: center;
+}
 .contenedor-header header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
@@ -132,6 +136,7 @@ html{
 }
 .tabla .contenido-tabla input{
     border: none;
+    background-color: whitesmoke;
 }
 .tabla .contenido-tabla table{
     width: auto;
@@ -142,7 +147,7 @@ html{
 .tabla .contenido-tabla th{
     text-align: center;
     background-color: #096292;
-    color: #f8f8f8;
+    color: whitesmoke;
     border: 2px solid #096292;
     padding: 2px 5px;
 }
@@ -257,10 +262,10 @@ cursor: pointer;
 
 /* VALIDACIÓN */
 .verde{
-    background-color: #bdecb6;
+    background-color: #22c755;
 }
 .rojo{
-    background-color: #ff6961;
+    background-color: #df5b54;
 }
 .amarillo{
     background-color: #fdfd96;
