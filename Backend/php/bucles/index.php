@@ -154,3 +154,106 @@ for ($i = 1; $i <= $alcance; $i++) {
 }
 echo "</tr>";
 echo "</table>";
+
+echo "<hr>";
+
+echo "<h3>9. Crear un programa de PHP que imprima un tablero de ajedrez
+Pista: Usar una tabla con 270px de ancho y 30px como medida para las celdas.</h3>";
+
+echo "<table width='270px'>";
+for($i = 0; $i < 9; $i++){
+    echo "<tr>";
+    for($j = 0; $j < 9; $j++){
+        if(($i + $j) %2){ // si es par pinto negro si no blanco
+            echo "<td height='30px' width='30px' bgcolor='black'></td>";
+        }
+        else{
+            echo "<td height='30px' width='30px' bgcolor='white'></td>";
+        }
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+echo "<hr>";
+
+echo "<h3>10. Crear un script que imprima la siguiente tabla.</h3>";
+
+echo "<table>";
+$alcance = 10;
+for ($fila = 1; $fila <= $alcance; $fila++) {
+    echo "<tr>";
+    for ($celda = 1; $celda <= $alcance; $celda++) {
+        echo "<td>";
+        echo $fila * $celda;
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+echo "<hr>";
+
+echo "<h3>11. Escribir un programa de PHP que itere los números del 1 al 50. Al imprimirlos, los multiplos de 3
+que se sustituiran por 'Fizz', los multiplos de 5 por 'Buzz' y los que sean múltiplos de 3 
+y 5 por 'FizzBuzz'.</h3>";
+
+for ($i=1; $i <= 50; $i++) {
+
+    if ($i % 3 == 0 && $i % 5 == 0){
+        echo "FizzBuzz";
+    } elseif ($i % 3 == 0) {
+        echo "Fizz";
+    } elseif ($i % 5 == 0) {
+        echo "Buzz";
+    } else echo "$i";
+
+    echo "<br>";  
+}
+
+echo "<hr>";
+
+echo "<h3>12. Escribir un programa capaz de imprimir un triangulo de Floyd con tantas filas
+como le indiquemos.</h3>";
+
+$alcance = 12;
+$contador = 1;
+$espacio = "&nbsp;&nbsp;";
+
+for ($fila = 1; $fila <= $alcance; $fila++) {
+    
+    for ($columna = 1; $columna <= $fila; $columna++) {
+        if ($contador < 10) echo "0";
+        echo "$contador";
+        echo "$espacio";
+        $contador++;
+    }
+    echo "<br>";   
+}
+
+echo "<hr>";
+
+echo "<h3>13. Escribir un bucle de PHP que imprima una A. 
+Ejemplo:
+     * * *
+   *       *
+   *       *
+   * * * * *
+   *       *
+   *       *
+   *       *
+   *       *
+</h3>";
+
+
+echo "<hr>";
+echo "<h3>14. Escribir un bucle de PHP que sea capaz de imprimir este patrón:
+<br>
+// 1 5 9 
+<br> 
+// 2 6 10
+<br>
+// 3 7 11
+<br>
+// 4 8 12
+</h3>";
