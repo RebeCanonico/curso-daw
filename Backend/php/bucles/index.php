@@ -245,15 +245,55 @@ Ejemplo:
    *       *
 </h3>";
 
+$espacios = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+echo "<pre>";
+for ($i = 1; $i <= 8; $i++) {
+
+    if ($i != 1) {
+        echo "* ";
+    } else echo "&nbsp;&nbsp;";
+
+    if ($i == 1 || $i == 4) {
+        echo "* * *";
+    } else echo $espacios;
+
+    if ($i != 1) echo " *";
+    echo "<br>";
+}
+echo "</pre>";
+
 
 echo "<hr>";
-echo "<h3>14. Escribir un bucle de PHP que sea capaz de imprimir este patrón:
-<br>
+echo "<h3>14. Escribir un bucle de PHP que sea capaz de imprimir este patrón:</h3>";
 // 1 5 9 
-<br> 
 // 2 6 10
-<br>
 // 3 7 11
-<br>
 // 4 8 12
-</h3>";
+
+$n = 4;
+for ($i = 1; $i <= $n; $i++) { 
+    echo $i . " ";
+    for ($j = 1; $j < 3; $j++) { 
+        echo ($i + $n * $j) . " ";
+    }
+    echo '<br>';
+}
+
+echo "<hr>";
+echo "<h3>15. Escribir un bucle de PHP que sea capaz de imprimir este patrón:</h3>";
+// 1
+// 121
+// 12321
+// 1234321
+// 123454321
+
+$n = 5;
+for ($i = 1; $i <= $n; $i++) { 
+    for ($j = 1; $j <= $i; $j++) { 
+        echo $j." ";
+    }
+    for ($j = $i-1; $j >= 1; $j--){
+        echo $j." ";
+    }
+    echo '<br>';
+}
