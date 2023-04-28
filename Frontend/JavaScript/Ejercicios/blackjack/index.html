@@ -22,9 +22,16 @@
 <body>
 
     <div class="container">
+
         <div id="contenedor-baraja">
 
         </div>
+        <div class="controles">
+            <button class="boton" onclick="voltearBaraja()">Voltear cartas</button>
+            <button class="boton" onclick="juntar()">Juntar cartas</button>
+            <button class="boton" onclick="separar()">Separar cartas</button>
+            <button class="boton" onclick="mezclar()">Mezclar cartas</button>
+            </div>
         <div class="tablero">
             <div class="tablero-casa">
                 <p>Cartas de la casa: <span id="mano-casa"></span></p>
@@ -53,12 +60,7 @@
             <div id="boteApuestas">
             </div>
         </div>
-        
 
-        <button onclick="voltearBaraja()">Voltear cartas</button>
-        <button onclick="juntar()">Juntar cartas</button>
-        <button onclick="separar()">Separar cartas</button>
-        <button onclick="mezclar()">Mezclar cartas</button>
     </div>
 </body>
 <script src="script.js"></script>
